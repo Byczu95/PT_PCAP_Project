@@ -126,5 +126,10 @@ namespace PT_UI_Design
             tabControl.SelectedIndex = 0;
             tabControl.Items.Refresh();
         }
+
+        private void File_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
