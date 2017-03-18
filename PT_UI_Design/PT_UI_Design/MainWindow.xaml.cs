@@ -53,6 +53,8 @@ namespace PT_UI_Design
                 {
                     _tabAdd = new TabItem();
                     _tabAdd.Header = ExtractFileName(s);
+                    PcapFileControl pfc = new PcapFileControl(s);
+                    _tabAdd.Content = pfc;
                     if (_tabItems.Count == 0) _tabItems.Add(_tabAdd);
                     else _tabItems.Insert(_tabItems.Count - 1, _tabAdd);
                 }

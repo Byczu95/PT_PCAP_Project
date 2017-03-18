@@ -30,7 +30,9 @@
             
             <StatusBar HorizontalAlignment="Left" Margin="0" VerticalAlignment="Bottom" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" Height="21" DockPanel.Dock="Bottom"/>
 
-            <TabControl x:Name="tabControl" Margin="0" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged"/>
+            <TabControl x:Name="tabControl" Margin="0" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged">
+                
+            </TabControl>
         </DockPanel>
     </Grid>
 </Window>

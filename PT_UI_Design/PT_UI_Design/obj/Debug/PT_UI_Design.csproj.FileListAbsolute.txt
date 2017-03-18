@@ -28,3 +28,6 @@ C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debu
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.csproj.GenerateResource.Cache
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\WindowGraph.g.cs
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\WindowGraph.baml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PcapFileControl.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PcapFileControl.baml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\GeneratedInternalTypeHelper.g.cs
