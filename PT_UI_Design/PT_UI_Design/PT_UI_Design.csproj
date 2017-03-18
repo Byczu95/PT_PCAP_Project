@@ -58,6 +58,9 @@
     <Compile Include="PcapFileControl.xaml.cs">
       <DependentUpon>PcapFileControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowGraph.xaml.cs">
       <DependentUpon>WindowGraph.xaml</DependentUpon>
     </Compile>
@@ -75,6 +78,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PcapFileControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -27,6 +27,23 @@ namespace PT_UI_Design
 
         static int a = 3;
 
+        private void AddStartPage()
+        {
+            _tabAdd = new TabItem();
+            _tabAdd.Header = "Start Page";
+            StartPage sp = new StartPage();
+            _tabAdd.Content = sp;
+
+            if (_tabItems.Count == 0) _tabItems.Add(_tabAdd);
+            else _tabItems.Insert(_tabItems.Count - 1, _tabAdd);
+
+            tabControl.DataContext = null;
+            tabControl.DataContext = _tabItems;
+
+            tabControl.SelectedIndex = 0;
+            tabControl.Items.Refresh();
+        }
+
         private string ExtractFileName(string fullName)
         {
             string[] split = fullName.Split('\\');
@@ -38,7 +55,7 @@ namespace PT_UI_Design
             InitializeComponent();
 
             _tabItems = new List<TabItem>();
-            //_tabAdd = new TabItem();
+            AddStartPage();
         }
 
         private void File_Open_Click(object sender, RoutedEventArgs e)
@@ -81,6 +98,11 @@ namespace PT_UI_Design
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //TODO zamykanie wszystkich okien
+        }
+
+        private void View_StartPage_Click(object sender, RoutedEventArgs e)
+        {
+            AddStartPage();
         }
     }
 }

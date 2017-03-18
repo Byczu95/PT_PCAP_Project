@@ -9,7 +9,7 @@
     <Grid x:Name="grid_Main">
         <DockPanel HorizontalAlignment="Center" Height="{Binding ElementName=grid_Main,Path=ActualHeight}" LastChildFill="True" Margin="0" VerticalAlignment="Center" Width="{Binding ElementName=grid_Main,Path=ActualWidth}">
             <Menu x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Top" IsMainMenu="True" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" DockPanel.Dock="Top">
-                <MenuItem Header="Plik">
+                <MenuItem x:Name="File" Header="Plik">
                     <MenuItem x:Name="File_Open" Header="Otwórz" Click="File_Open_Click"/>
                     <MenuItem x:Name="File_Save" Header="Zapisz"/>
                     <MenuItem x:Name="File_SaveAs" Header="Zapisz jako"/>
@@ -19,13 +19,16 @@
                     <Separator/>
                     <MenuItem x:Name="File_Exit" Header="Zamknij program"/>
                 </MenuItem>
-                <MenuItem Header="Edycja"/>
-                <MenuItem Header="Analizuj">
+                <MenuItem x:Name="Edit" Header="Edycja"/>
+                <MenuItem x:Name="View" Header="Widok">
+                    <MenuItem x:Name="View_StartPage" Header="Strona startowa" Click="View_StartPage_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="Analize" Header="Analizuj">
                     <MenuItem x:Name="Analize_Graph" Header="Mapuj topologię sieci" Click="Analize_Graph_Click"/>
                     <Separator/>
-                    <MenuItem Header="Statystyki"/>
+                    <MenuItem x:Name="Analize_Statistics" Header="Statystyki"/>
                 </MenuItem>
-                <MenuItem Header="Pomoc"/>
+                <MenuItem x:Name="Help" Header="Pomoc"/>
             </Menu>
             
             <StatusBar HorizontalAlignment="Left" Margin="0" VerticalAlignment="Bottom" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" Height="21" DockPanel.Dock="Bottom"/>
