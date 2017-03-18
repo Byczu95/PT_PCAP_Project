@@ -104,5 +104,27 @@ namespace PT_UI_Design
         {
             AddStartPage();
         }
+
+        private void File_Close_Card_Click(object sender, RoutedEventArgs e)
+        {
+            _tabItems.Remove(_tabItems[tabControl.SelectedIndex]);
+
+            tabControl.DataContext = null;
+            tabControl.DataContext = _tabItems;
+
+            tabControl.SelectedIndex = 0;
+            tabControl.Items.Refresh();
+        }
+
+        private void File_Close_Cards_Click(object sender, RoutedEventArgs e)
+        {
+            _tabItems.Clear();
+
+            tabControl.DataContext = null;
+            tabControl.DataContext = _tabItems;
+
+            tabControl.SelectedIndex = 0;
+            tabControl.Items.Refresh();
+        }
     }
 }
