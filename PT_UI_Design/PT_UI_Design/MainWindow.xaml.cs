@@ -25,31 +25,47 @@ namespace PT_UI_Design
         private List<TabItem> _tabItems;
         private TabItem _tabAdd;
 
+        private string ExtractFileName(string fullName)
+        {
+            string[] split = fullName.Split('\\');
+            return split[split.Length-1];
+        }
+
         public MainWindow()
         {
             InitializeComponent();
 
             _tabItems = new List<TabItem>();
-            _tabAdd = new TabItem();
-
+            //_tabAdd = new TabItem();
         }
 
         private void File_Open_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            if(openFileDialog.ShowDialog() == true)
+            openFileDialog.Filter = "PCAPNG Files (*.pcapng)|*.pcapng";
+            openFileDialog.Title = "Please select an file to open.";
+            if (openFileDialog.ShowDialog() == true)
             {
                 //TODO wczytywanie pliku lub plików
                 foreach (String s in openFileDialog.FileNames)
                 {
-                    _tabAdd.Header = s;
-                    _tabItems.Add(_tabAdd);
-                    _tabItems.Insert(_tabItems.Count - 1, _tabAdd);
+                    _tabAdd = new TabItem();
+                    _tabAdd.Header = ExtractFileName(s);
+                    if (_tabItems.Count == 0) _tabItems.Add(_tabAdd);
+                    else _tabItems.Insert(_tabItems.Count - 1, _tabAdd);
                 }
 
-                tabControl.DataContext = _tabItems; //TODO dodawanie nowych a nie nadpisywanie
+                tabControl.DataContext = null;
+                tabControl.DataContext = _tabItems;
+
                 tabControl.SelectedIndex = 0;
+                tabControl.Items.Refresh();
             }
+        }
+
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

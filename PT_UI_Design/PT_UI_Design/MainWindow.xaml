@@ -21,10 +21,7 @@
             </MenuItem>
             <MenuItem Header="Pomoc"/>
         </Menu>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="301" Margin="0,18,0,0" VerticalAlignment="Top" Width="517">
-            <TabItem Header="Rozpocznij">
-                <Grid Background="Blue"/>
-            </TabItem>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="301" Margin="0,18,0,0" VerticalAlignment="Top" Width="517" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged">
         </TabControl>
 
     </Grid>
