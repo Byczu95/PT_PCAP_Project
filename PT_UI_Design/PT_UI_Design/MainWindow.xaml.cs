@@ -25,6 +25,8 @@ namespace PT_UI_Design
         private List<TabItem> _tabItems;
         private TabItem _tabAdd;
 
+        static int a = 3;
+
         private string ExtractFileName(string fullName)
         {
             string[] split = fullName.Split('\\');
@@ -66,6 +68,17 @@ namespace PT_UI_Design
         private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+        }
+
+        private void Analize_Graph_Click(object sender, RoutedEventArgs e)
+        {
+            WindowGraph winG = new WindowGraph();
+            winG.Show();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            //TODO zamykanie wszystkich okien
         }
     }
 }

@@ -5,24 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PT_UI_Design"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Menu x:Name="menu" HorizontalAlignment="Center" VerticalAlignment="Top" Width="517" IsMainMenu="True">
-            <MenuItem Header="Plik">
-                <MenuItem x:Name="File_Open" Header="Otwórz" Click="File_Open_Click"/>
-                <MenuItem x:Name="File_Save" Header="Zapisz"/>
-                <MenuItem x:Name="File_SaveAs" Header="Zapisz jako"/>
-            </MenuItem>
-            <MenuItem Header="Edycja"/>
-            <MenuItem Header="Analizuj">
-                <MenuItem Header="Mapuj topologię sieci"/>
-                <Separator/>
-                <MenuItem Header="Statystyki"/>
-            </MenuItem>
-            <MenuItem Header="Pomoc"/>
-        </Menu>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="301" Margin="0,18,0,0" VerticalAlignment="Top" Width="517" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged">
-        </TabControl>
+        Title="MainWindow" Height="350" Width="525" Closing="Window_Closing" MinWidth="800" MinHeight="600">
+    <Grid x:Name="grid_Main">
+        <DockPanel HorizontalAlignment="Center" Height="{Binding ElementName=grid_Main,Path=ActualHeight}" LastChildFill="True" Margin="0" VerticalAlignment="Center" Width="{Binding ElementName=grid_Main,Path=ActualWidth}">
+            <Menu x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Top" IsMainMenu="True" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" DockPanel.Dock="Top">
+                <MenuItem Header="Plik">
+                    <MenuItem x:Name="File_Open" Header="Otwórz" Click="File_Open_Click"/>
+                    <MenuItem x:Name="File_Save" Header="Zapisz"/>
+                    <MenuItem x:Name="File_SaveAs" Header="Zapisz jako"/>
+                    <Separator/>
+                    <MenuItem x:Name="File_Close_Card" Header="Zamknij kartę"/>
+                    <MenuItem x:Name="File_Close_Cards" Header="Zamknij wszystkie karty"/>
+                    <Separator/>
+                    <MenuItem x:Name="File_Exit" Header="Zamknij program"/>
+                </MenuItem>
+                <MenuItem Header="Edycja"/>
+                <MenuItem Header="Analizuj">
+                    <MenuItem x:Name="Analize_Graph" Header="Mapuj topologię sieci" Click="Analize_Graph_Click"/>
+                    <Separator/>
+                    <MenuItem Header="Statystyki"/>
+                </MenuItem>
+                <MenuItem Header="Pomoc"/>
+            </Menu>
+            
+            <StatusBar HorizontalAlignment="Left" Margin="0" VerticalAlignment="Bottom" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" Height="21" DockPanel.Dock="Bottom"/>
 
+            <TabControl x:Name="tabControl" Margin="0" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged"/>
+        </DockPanel>
     </Grid>
 </Window>
