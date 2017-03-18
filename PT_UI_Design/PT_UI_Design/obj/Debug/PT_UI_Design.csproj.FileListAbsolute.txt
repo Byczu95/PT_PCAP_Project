@@ -1,0 +1,14 @@
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\bin\Debug\PT_UI_Design.exe.config
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\bin\Debug\PT_UI_Design.exe
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\bin\Debug\PT_UI_Design.pdb
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.csprojResolveAssemblyReference.cache
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\MainWindow.g.cs
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\App.g.cs
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design_MarkupCompile.cache
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design_MarkupCompile.lref
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\MainWindow.baml
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.g.resources
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.Properties.Resources.resources
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.csproj.GenerateResource.Cache
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.exe
+c:\users\tetrach\documents\visual studio 2015\Projects\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.pdb
