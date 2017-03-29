@@ -49,7 +49,7 @@ namespace PT_UI_Design
             }
 
             device.OnPacketArrival += new PacketArrivalEventHandler(device_OnPacketArrival);
-            label.Content += "-- Capturing from " +  _filePath + '\n';
+            label.Content += "-- Capturing from " +  _filePath + "\n\n";
 
             device.Capture();
 
@@ -58,24 +58,34 @@ namespace PT_UI_Design
             
         }
 
-        private static int packetIndex = 0;
+        private static int packetIndex = 1;
 
         /// <summary>
-        /// Prints the source and dest MAC addresses of each received Ethernet frame
+        /// Prints the TTL, source and dest IP and MAC addresses of each received Ethernet frame
         /// </summary>
         private static void device_OnPacketArrival(object sender, CaptureEventArgs e)
         {
             if (e.Packet.LinkLayerType == PacketDotNet.LinkLayers.Ethernet)
             {
                 var packet = PacketDotNet.Packet.ParsePacket(e.Packet.LinkLayerType, e.Packet.Data);
-                var ethernetPacket = (PacketDotNet.EthernetPacket)packet;
 
-                _label.Content += packetIndex + "At: ";
-                _label.Content += e.Packet.Timeval.Date.ToString() + " : ";
-                _label.Content += e.Packet.Timeval.Date.Millisecond + " : MAC: ";
-                _label.Content += ethernetPacket.SourceHwAddress + " -> MAC: ";
-                _label.Content += ethernetPacket.DestinationHwAddress.ToString() + "\n";
-                
+                if ((PacketDotNet.EthernetPacket)packet != null)
+                {
+                    var ethernetPacket = (PacketDotNet.EthernetPacket)packet;
+
+                    if (IpPacket.GetEncapsulated(packet) != null)
+                    {
+                        var ipPacket = IpPacket.GetEncapsulated(packet);
+
+                        _label.Content += packetIndex + "  ";
+                        _label.Content += e.Packet.Timeval.Date.ToString() + "\t IP: ";
+                        _label.Content += ipPacket.SourceAddress.MapToIPv4() + "  -> IP: ";
+                        _label.Content += ipPacket.DestinationAddress.MapToIPv4() + "\t MAC: ";
+                        _label.Content += ethernetPacket.SourceHwAddress + " -> MAC: ";
+                        _label.Content += ethernetPacket.DestinationHwAddress.ToString() + "   TTL: " + ipPacket.TimeToLive + "\n";
+                    }
+                    
+                }
                 packetIndex++;
             }
             
