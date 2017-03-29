@@ -24,6 +24,13 @@ namespace PT_UI_Design
             Rand = new Random();
             GraphAreaPcap_Setup();
             randomGraph();
+            RelayoutGraph();
+        }
+
+        private void RelayoutGraph()
+        {
+            Area.RelayoutGraph();
+            zoomctrl.ZoomToFill();
         }
 
         private void randomGraph()
@@ -104,7 +111,7 @@ namespace PT_UI_Design
                 //This ID is needed for several features such as serialization and edge routing algorithms.
                 //If you don't need any custom IDs and you are using automatic Area.GenerateGraph() method then you can skip ID assignment
                 //because specified method automaticaly assigns missing data ids (this behavior is controlled by method param).
-                var dataVertex = new DataVertex("MyVertex " + i);
+                var dataVertex = new DataVertex("W " + i);
                 //Add vertex to data graph
                 dataGraph.AddVertex(dataVertex);
             }

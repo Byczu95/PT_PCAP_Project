@@ -5,10 +5,13 @@
         xmlns:models="clr-namespace:SimpleGraph.Models"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="http://schemas.panthernet.ru/graphx/"
         xmlns:local="clr-namespace:PT_UI_Design"
         mc:Ignorable="d"
         Title="WindowGraph" Height="300" Width="300">
     <Grid>
-        <models:GraphAreaPcap x:Name="Area"/>
+        <controls:ZoomControl x:Name="zoomctrl" Grid.Row="1">
+            <models:GraphAreaPcap x:Name="Area"/>
+        </controls:ZoomControl>
     </Grid>
 </Window>
