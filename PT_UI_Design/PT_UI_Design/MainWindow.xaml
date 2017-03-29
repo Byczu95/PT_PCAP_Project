@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" Closing="Window_Closing" MinWidth="800" MinHeight="600">
     <Grid x:Name="grid_Main">
-        <DockPanel HorizontalAlignment="Center" Height="{Binding ElementName=grid_Main,Path=ActualHeight}" LastChildFill="True" Margin="0" VerticalAlignment="Center" Width="{Binding ElementName=grid_Main,Path=ActualWidth}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="39*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel HorizontalAlignment="Center" Height="{Binding ElementName=grid_Main,Path=ActualHeight}" LastChildFill="True" Margin="0" VerticalAlignment="Center" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" Grid.ColumnSpan="2">
             <Menu x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Top" IsMainMenu="True" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" DockPanel.Dock="Top">
                 <MenuItem x:Name="File" Header="Plik">
                     <MenuItem x:Name="File_Open" Header="Otwórz" Click="File_Open_Click"/>
@@ -30,11 +34,11 @@
                 </MenuItem>
                 <MenuItem x:Name="Help" Header="Pomoc"/>
             </Menu>
-            
+
             <StatusBar HorizontalAlignment="Left" Margin="0" VerticalAlignment="Bottom" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" Height="21" DockPanel.Dock="Bottom"/>
 
             <TabControl x:Name="tabControl" Margin="0" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" ItemsSource="{Binding}" SelectionChanged="tabControl_SelectionChanged">
-                
+
             </TabControl>
         </DockPanel>
     </Grid>
