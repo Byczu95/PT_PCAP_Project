@@ -10,10 +10,6 @@
         mc:Ignorable="d"
         Title="WindowGraph" Height="600" Width="600">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="227*"/>
-            <ColumnDefinition Width="65*"/>
-        </Grid.ColumnDefinitions>
         <controls:ZoomControl x:Name="zoomctrl" Grid.ColumnSpan="2" Margin="10,10,-10,-10">
             <models:GraphAreaPcap x:Name="Area"/>
         </controls:ZoomControl>
