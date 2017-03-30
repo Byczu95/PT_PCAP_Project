@@ -30,7 +30,7 @@ namespace PT_UI_Design
         private void AddStartPage()
         {
             _tabAdd = new TabItem();
-            _tabAdd.Header = "Start Page";
+            _tabAdd.Header = "Strona startowa";
             StartPage sp = new StartPage();
             _tabAdd.Content = sp;
 
@@ -61,7 +61,7 @@ namespace PT_UI_Design
         private void File_Open_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "PCAPNG Files (*.pcapng)|*.pcapng";
+            openFileDialog.Filter = "PCAPNG and PCAP Files (*.pcapng, *.pcap)|*.pcapng; *.pcap";
             openFileDialog.Title = "Please select an file to open.";
             if (openFileDialog.ShowDialog() == true)
             {
