@@ -25,11 +25,11 @@ namespace PT_UI_Design
     public partial class PcapFileControl : UserControl
     {
         private string _filePath;
-        private static Label _label;
+        private static TextBox _textBox;
         public PcapFileControl(string filePath)
         {
             InitializeComponent();
-            _label = label;
+            _textBox = textBox;
             _filePath = filePath;
 
             ICaptureDevice device;
@@ -44,17 +44,17 @@ namespace PT_UI_Design
             }
             catch (Exception e)
             {
-                label.Content += "Caught exception when opening file" + e.ToString();
+                textBox.Text += "Caught exception when opening file" + e.ToString();
                 return;
             }
 
             device.OnPacketArrival += new PacketArrivalEventHandler(device_OnPacketArrival);
-            label.Content += "-- Capturing from " +  _filePath + "\n\n";
+            textBox.Text += "-- Capturing from " +  _filePath + "\n\n";
 
             device.Capture();
 
             device.Close();
-            label.Content += "-- End of file reached.";
+            textBox.Text += "-- End of file reached.";
             
         }
 
@@ -77,12 +77,12 @@ namespace PT_UI_Design
                     {
                         var ipPacket = IpPacket.GetEncapsulated(packet);
 
-                        _label.Content += packetIndex + "  ";
-                        _label.Content += e.Packet.Timeval.Date.ToString() + "\t IP: ";
-                        _label.Content += ipPacket.SourceAddress.MapToIPv4() + "  -> IP: ";
-                        _label.Content += ipPacket.DestinationAddress.MapToIPv4() + "\t MAC: ";
-                        _label.Content += ethernetPacket.SourceHwAddress + " -> MAC: ";
-                        _label.Content += ethernetPacket.DestinationHwAddress.ToString() + "   TTL: " + ipPacket.TimeToLive + "\n";
+                        _textBox.Text += packetIndex + "  ";
+                        _textBox.Text += e.Packet.Timeval.Date.ToString() + "\t IP: ";
+                        _textBox.Text += ipPacket.SourceAddress.MapToIPv4() + "  -> IP: ";
+                        _textBox.Text += ipPacket.DestinationAddress.MapToIPv4() + "\t   MAC: ";
+                        _textBox.Text += ethernetPacket.SourceHwAddress + " -> MAC: ";
+                        _textBox.Text += ethernetPacket.DestinationHwAddress.ToString() + "   TTL: " + ipPacket.TimeToLive + "\n";
                     }
                     
                 }
