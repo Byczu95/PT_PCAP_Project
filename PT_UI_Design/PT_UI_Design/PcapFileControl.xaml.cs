@@ -26,11 +26,36 @@ namespace PT_UI_Design
     {
         private string _filePath;
         private static TextBox _textBox;
+        private static ListView _listview;
+        private static List<MyPacket> packets;
+
+        public class MyPacket
+        {
+            public int Id { get; set; }
+
+            public string Time { get; set; }
+
+            public string SourceMac { get; set; }
+
+            public string DestMac { get; set; }
+
+            public string SourceIP { get; set; }
+
+            public string DestIP { get; set; }
+           
+        }
+
         public PcapFileControl(string filePath)
         {
             InitializeComponent();
             _textBox = textBox;
+            _listview = listViewFileData;
             _filePath = filePath;
+
+            filterComboBox.Items.Add("Adres źródłowy MAC");
+            filterComboBox.Items.Add("Adres docelowy MAC");
+            filterComboBox.Items.Add("Adres źródłowy IP");
+            filterComboBox.Items.Add("Adres docelowy IP");
 
             ICaptureDevice device;
 
@@ -54,14 +79,13 @@ namespace PT_UI_Design
             device.Capture();
 
             device.Close();
-            textBox.Text += "-- End of file reached.";
             
         }
 
         private static int packetIndex = 1;
 
         /// <summary>
-        /// Prints the TTL, source and dest IP and MAC addresses of each received Ethernet frame
+        /// Prints the source and dest IP and MAC addresses of each received Ethernet frame
         /// </summary>
         private static void device_OnPacketArrival(object sender, CaptureEventArgs e)
         {
@@ -77,24 +101,27 @@ namespace PT_UI_Design
                     {
                         var ipPacket = IpPacket.GetEncapsulated(packet);
 
-                        _textBox.Text += packetIndex + "  ";
-                        _textBox.Text += e.Packet.Timeval.Date.ToString() + "\t IP: ";
-                        _textBox.Text += ipPacket.SourceAddress.MapToIPv4() + "  -> IP: ";
-                        _textBox.Text += ipPacket.DestinationAddress.MapToIPv4() + "\t   MAC: ";
-                        _textBox.Text += ethernetPacket.SourceHwAddress + " -> MAC: ";
-                        _textBox.Text += ethernetPacket.DestinationHwAddress.ToString() + "   TTL: " + ipPacket.TimeToLive + "\n";
+                        _listview.Items.Add(new MyPacket { Id = packetIndex, 
+                                                         Time = e.Packet.Timeval.Date.ToString(),
+                                                         SourceIP = ipPacket.SourceAddress.MapToIPv4().ToString(), 
+                                                         DestIP = ipPacket.DestinationAddress.MapToIPv4().ToString(),
+                                                         SourceMac = ethernetPacket.SourceHwAddress.ToString(),
+                                                         DestMac = ethernetPacket.DestinationHwAddress.ToString()
+                                                            });
                     }
-                    
                 }
                 packetIndex++;
             }
-            
         }
 
-        private void filterTextBox_TouchEnter(object sender, TouchEventArgs e)
+        public static List<MyPacket> getPacketsData()
         {
-
+            packets = new List<MyPacket>();
+            foreach(MyPacket p in _listview.Items)
+            {
+                packets.Add(p);
+            }
+            return packets;
         }
-
     }
 }
