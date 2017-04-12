@@ -20,18 +20,18 @@
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Content="Filtr:" Height="30" Margin="5" />
             <ComboBox Grid.Row="0" Grid.Column="1" x:Name="filterComboBox" Margin="5" SelectedIndex="0" MinWidth="180" Height="30" />
-            <TextBox Grid.Row="0" Grid.Column="2" x:Name="filterTextBox" Text="&#xD;&#xA;" MinWidth="500" TouchEnter="filterTextBox_TouchEnter" MaxHeight="30" Height="30"  Margin="5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+            <TextBox Grid.Row="0" Grid.Column="2" x:Name="filterTextBox" Text="&#xD;&#xA;" MinWidth="500" MaxHeight="30" Height="30"  Margin="5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
         </Grid>
-        <TextBox Grid.Row="1" x:Name="textBox" IsReadOnly="True" Height="30" Margin="5" MinWidth="780" TextChanged="textBox_TextChanged"/>
+        <TextBox Grid.Row="1" x:Name="textBox" IsReadOnly="True" Height="30" Margin="5" MinWidth="780"/>
         <ListView Grid.Row="2" x:Name="listViewFileData" Margin="5" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Stretch" Height="500" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Id" Width="40" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Id" Width="45" DisplayMemberBinding="{Binding Id}"/>
                     <GridViewColumn Header="Czas" Width="120" DisplayMemberBinding="{Binding Time}"/>
-                    <GridViewColumn Header="Zrodl. adres IP" Width="120" DisplayMemberBinding="{Binding SourceIP}"/>
-                    <GridViewColumn Header="Docel. adres IP" Width="120" DisplayMemberBinding="{Binding DestIP}"/>
-                    <GridViewColumn Header="Zrodl. adres MAC" Width="120" DisplayMemberBinding="{Binding SourceMac}"/>
-                    <GridViewColumn Header="Docel. adres MAC" Width="120" DisplayMemberBinding="{Binding DestMac}"/>
+                    <GridViewColumn Header="Zrodl. adres IP" Width="155" DisplayMemberBinding="{Binding SourceIP}"/>
+                    <GridViewColumn Header="Docel. adres IP" Width="155" DisplayMemberBinding="{Binding DestIP}"/>
+                    <GridViewColumn Header="Zrodl. adres MAC" Width="155" DisplayMemberBinding="{Binding SourceMac}"/>
+                    <GridViewColumn Header="Docel. adres MAC" Width="155" DisplayMemberBinding="{Binding DestMac}"/>
 
                 </GridView>
             </ListView.View>
