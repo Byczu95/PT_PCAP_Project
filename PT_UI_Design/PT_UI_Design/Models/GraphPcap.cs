@@ -1,6 +1,6 @@
 using QuickGraph;
 
-namespace SimpleGraph.Models
+namespace PT_UI_Design.Models
 {
     /// <summary>
     /// This is our custom data graph derived from BidirectionalGraph class using custom data types.

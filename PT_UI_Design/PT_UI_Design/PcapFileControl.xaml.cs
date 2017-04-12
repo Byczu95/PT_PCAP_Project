@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using SharpPcap;
 using PacketDotNet;
 using SharpPcap.LibPcap;
+using PT_UI_Design.Models;
 using NUnit.Framework;
 
 namespace PT_UI_Design
@@ -28,22 +29,6 @@ namespace PT_UI_Design
         private static TextBox _textBox;
         private static ListView _listview;
         private static List<MyPacket> packets;
-
-        public class MyPacket
-        {
-            public int Id { get; set; }
-
-            public string Time { get; set; }
-
-            public string SourceMac { get; set; }
-
-            public string DestMac { get; set; }
-
-            public string SourceIP { get; set; }
-
-            public string DestIP { get; set; }
-           
-        }
 
         public PcapFileControl(string filePath)
         {

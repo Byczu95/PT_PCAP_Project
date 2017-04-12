@@ -4,7 +4,7 @@ using System.Windows;
 using GraphX.PCL.Common.Enums;
 using GraphX.PCL.Logic.Algorithms.LayoutAlgorithms;
 using GraphX.Controls;
-using SimpleGraph.Models;
+using PT_UI_Design.Models;
 using QuickGraph;
 
 namespace PT_UI_Design

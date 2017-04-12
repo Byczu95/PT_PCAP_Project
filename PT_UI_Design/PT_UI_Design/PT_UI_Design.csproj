@@ -100,6 +100,7 @@
     <Compile Include="Models\GraphAreaPcap.cs" />
     <Compile Include="Models\GraphPcap.cs" />
     <Compile Include="Models\GXLogicCoreExample.cs" />
+    <Compile Include="Models\PacketModel.cs" />
     <Compile Include="PcapFileControl.xaml.cs">
       <DependentUpon>PcapFileControl.xaml</DependentUpon>
     </Compile>

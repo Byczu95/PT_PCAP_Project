@@ -1,7 +1,7 @@
 using GraphX.Controls;
 using QuickGraph;
 
-namespace SimpleGraph.Models
+namespace PT_UI_Design.Models
 {
     /// <summary>
     /// This is custom GraphArea representation using custom data types.

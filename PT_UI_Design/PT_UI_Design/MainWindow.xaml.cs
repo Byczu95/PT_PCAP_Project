@@ -50,12 +50,19 @@ namespace PT_UI_Design
             return split[split.Length-1];
         }
 
+        private bool IsAPcapFile(string text)
+        {
+            if (text.Contains(".pcap")) return true;
+            return false;
+        }
+
         public MainWindow()
         {
             InitializeComponent();
 
             _tabItems = new List<TabItem>();
             AddStartPage();
+            Analize.IsEnabled = false;
         }
 
         private void File_Open_Click(object sender, RoutedEventArgs e)
@@ -86,7 +93,11 @@ namespace PT_UI_Design
 
         private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            int selectionIndex = tabControl.SelectedIndex;
+            if (selectionIndex < 0) selectionIndex = 0;
+            TabItem ti = _tabItems[selectionIndex];
+            if (IsAPcapFile(ti.Header.ToString())) Analize.IsEnabled = true;
+            else Analize.IsEnabled = false;
         }
 
         private void Analize_Graph_Click(object sender, RoutedEventArgs e)

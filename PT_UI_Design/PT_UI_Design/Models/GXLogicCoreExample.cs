@@ -1,7 +1,7 @@
 using GraphX.PCL.Logic.Models;
 using QuickGraph;
 
-namespace SimpleGraph.Models
+namespace PT_UI_Design.Models
 {
     /// <summary>
     /// Logics core object which contains all algorithms and logic settings
