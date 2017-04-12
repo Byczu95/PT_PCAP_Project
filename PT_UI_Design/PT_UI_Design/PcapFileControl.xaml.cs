@@ -91,5 +91,10 @@ namespace PT_UI_Design
             
         }
 
+        private void filterTextBox_TouchEnter(object sender, TouchEventArgs e)
+        {
+
+        }
+
     }
 }
