@@ -172,5 +172,10 @@ namespace PT_UI_Design
         {
             Application.Current.Shutdown();
         }
+
+        private void File_Connect_Click(object sender, RoutedEventArgs e)
+        {
+            ConnectFilesWindow cfw = new ConnectFilesWindow();
+        }
     }
 }

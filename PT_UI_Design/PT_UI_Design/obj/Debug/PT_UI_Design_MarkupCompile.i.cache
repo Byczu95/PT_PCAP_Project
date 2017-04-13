@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\
+D:\Users\Szymon\Desktop\PT\PT_UI_Design\PT_UI_Design\obj\Debug\
 PT_UI_Design
 none
 false
 DEBUG;TRACE
-C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\App.xaml
-4-810685823
+D:\Users\Szymon\Desktop\PT\PT_UI_Design\PT_UI_Design\App.xaml
+5865982580
 3513397165
-191683935783
-25-1247164879
-GraphTabControl.xaml;MainWindow.xaml;PcapFileControl.xaml;StartPage.xaml;
+2053280323
+25-1920140173
+ConnectFilesWindow.xaml;GraphTabControl.xaml;MainWindow.xaml;PcapFileControl.xaml;StartPage.xaml;
 
 False
 

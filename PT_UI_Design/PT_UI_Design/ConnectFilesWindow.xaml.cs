@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PT_UI_Design
 {
     /// <summary>
-    /// Interaction logic for StartPage.xaml
+    /// Interaction logic for ConnectFilesWindow.xaml
     /// </summary>
-    public partial class StartPage : UserControl
+    public partial class ConnectFilesWindow : Window
     {
-        public StartPage()
+        public ConnectFilesWindow()
         {
             InitializeComponent();
         }

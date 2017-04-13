@@ -23,7 +23,9 @@
                     <Separator/>
                     <MenuItem x:Name="File_Exit" Header="Zamknij program" Click="File_Exit_Click"/>
                 </MenuItem>
-                <MenuItem x:Name="Edit" Header="Edycja"/>
+                <MenuItem x:Name="Edit" Header="Edycja">
+                    <MenuItem x:Name="Connect_Files" Header="Połącz pliki" Click="File_Connect_Click"/>
+                </MenuItem>
                 <MenuItem x:Name="View" Header="Widok">
                     <MenuItem x:Name="View_StartPage" Header="Strona startowa" Click="View_StartPage_Click"/>
                 </MenuItem>
@@ -32,7 +34,10 @@
                     <Separator/>
                     <MenuItem x:Name="Analize_Statistics" Header="Statystyki"/>
                 </MenuItem>
-                <MenuItem x:Name="Help" Header="Pomoc"/>
+                <MenuItem x:Name="Help" Header="Pomoc">
+                    <MenuItem x:Name="Autors" Header="Autorzy"/>
+                    <MenuItem x:Name="Document" Header="Dokumentacja"/>
+                </MenuItem>
             </Menu>
 
             <StatusBar HorizontalAlignment="Left" Margin="0" VerticalAlignment="Bottom" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" Height="21" DockPanel.Dock="Bottom"/>

@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>black-white-android-waypoint-map.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="GraphX.PCL.Common, Version=2.3.6.0, Culture=neutral, PublicKeyToken=a6cdb671d651b60a, processorArchitecture=MSIL">
       <HintPath>..\packages\GraphX.2.3.6.0\lib\net40-client\GraphX.PCL.Common.dll</HintPath>
@@ -97,6 +100,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConnectFilesWindow.xaml.cs">
+      <DependentUpon>ConnectFilesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GraphTabControl.xaml.cs">
       <DependentUpon>GraphTabControl.xaml</DependentUpon>
     </Compile>
@@ -112,6 +118,10 @@
     <Compile Include="StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="ConnectFilesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GraphTabControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -167,6 +177,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="black-white-android-waypoint-map.ico" />
     <Content Include="ExternalDlls\nunit.framework.dll" />
     <Content Include="ExternalDlls\PacketDotNet.dll" />
     <Content Include="ExternalDlls\SharpPcap.dll" />
