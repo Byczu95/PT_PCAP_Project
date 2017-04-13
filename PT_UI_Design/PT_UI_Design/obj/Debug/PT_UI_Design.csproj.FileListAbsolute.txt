@@ -33,7 +33,6 @@ C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\MainWindow.g.cs
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PcapFileControl.g.cs
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\StartPage.g.cs
-C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\WindowGraph.g.cs
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\App.g.cs
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design_Content.g.cs
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -42,7 +41,6 @@ C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\MainWindow.baml
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PcapFileControl.baml
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\StartPage.baml
-C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\WindowGraph.baml
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.g.resources
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.Properties.Resources.resources
 C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.csproj.GenerateResource.Cache
@@ -124,3 +122,7 @@ D:\Users\Szymon\Desktop\PT\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindo
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.baml
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.g.cs
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.csprojResolveAssemblyReference.cache
+C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.baml
+C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.g.cs
+C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\GraphTabControl.g.cs
+C:\Users\Szymon\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\GraphTabControl.baml

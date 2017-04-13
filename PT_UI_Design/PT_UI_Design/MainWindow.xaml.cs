@@ -175,7 +175,8 @@ namespace PT_UI_Design
 
         private void File_Connect_Click(object sender, RoutedEventArgs e)
         {
-            ConnectFilesWindow cfw = new ConnectFilesWindow();
+            ConnectFilesWindow cfw = new ConnectFilesWindow(_tabItems);
+            cfw.Show();
         }
     }
 }
