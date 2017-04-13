@@ -26,7 +26,6 @@ namespace PT_UI_Design
     public partial class GraphTabControl : UserControl
     {
         private static List<MyPacket> packets;
-        private static List<NetworkConnection> connections;
         private static List<NetworkInterface> interafaces;
 
         private Random Rand;
@@ -50,20 +49,47 @@ namespace PT_UI_Design
             interafaces = new List<NetworkInterface>();
             foreach(MyPacket p in packets)
             {
-                if (IsIntefaceUnique(p.SourceMac))
+                if (IsInterfaceUnique(p.SourceMac))
                 {
-                    interafaces.Add(new NetworkInterface(p.SourceMac));
+                    int newIndex = interafaces.Count;
+                    interafaces.Add(new NetworkInterface(p.SourceMac, newIndex));
+                    interafaces[newIndex].AddNewIPAdress(p.SourceMac, p.SourceIP);
+                }
+                else
+                {
+                    int index = FindNetworkInteface(p.SourceMac);
+                    if (interafaces[index].IPs.Contains(p.SourceIP)) { }
+                    else { interafaces[index].IPs.Add(p.SourceIP); }
+                }
 
+                if (IsInterfaceUnique(p.DestMac))
+                {
+                    int newIndex = interafaces.Count;
+                    interafaces.Add(new NetworkInterface(p.DestMac, newIndex));
+                    interafaces[newIndex].AddNewIPAdress(p.DestMac, p.DestIP);
+                }
+                else
+                {
+                    int index = FindNetworkInteface(p.DestMac);
+                    if (interafaces[index].IPs.Contains(p.DestIP)) { }
+                    else { interafaces[index].IPs.Add(p.DestIP); }
                 }
             }
         }
 
-        private NetworkInterface FindNetworkInteface(string mac)
+        private int FindNetworkInteface(string mac)
         {
-            
+            foreach(NetworkInterface n in interafaces)
+            {
+                if (n.MAC == mac)
+                {
+                    return n.pos;
+                }
+            }
+            return -1;
         }
 
-        private bool IsIntefaceUnique(string mac)
+        private bool IsInterfaceUnique(string mac)
         {
             foreach(NetworkInterface n in interafaces)
             {
@@ -77,20 +103,18 @@ namespace PT_UI_Design
 
         private void FindAllNetworkConnections()
         {
-            connections = new List<NetworkConnection>();
             foreach(MyPacket p in packets)
             {
-                //NetworkConnection newConnection = new NetworkConnection(newInterfaceDest, newInterfaceSour);
-
-                //if (IsConnectionUnique(newConnection)) connections.Add(newConnection);
+                int source = FindNetworkInteface(p.SourceMac);
+                if(!(interafaces[source].connections.Contains(p.DestIP))) interafaces[source].connections.Add(p.DestIP);
             }
         }
 
-        private bool IsConnectionUnique(NetworkConnection nc)
+        private bool IsConnectionUnique(string sourceIP,string destIP)
         {
-            foreach(NetworkConnection c in connections)
+            foreach(NetworkInterface ni in interafaces)
             {
-                if ((nc.interfaceA == c.interfaceA) || (nc.interfaceB == c.interfaceB)) return false;
+                return false;
             }
             return true;
         }
@@ -173,13 +197,13 @@ namespace PT_UI_Design
             //Now we need to create edges and vertices to fill data graph
             //This edges and vertices will represent graph structure and connections
             //Lets make some vertices
-            for (int i = 1; i < 10; i++)
+            foreach(NetworkInterface n in interafaces)
             {
                 //Create new vertex with specified Text. Also we will assign custom unique ID.
                 //This ID is needed for several features such as serialization and edge routing algorithms.
                 //If you don't need any custom IDs and you are using automatic Area.GenerateGraph() method then you can skip ID assignment
                 //because specified method automaticaly assigns missing data ids (this behavior is controlled by method param).
-                var dataVertex = new DataVertex("W " + i);
+                var dataVertex = new DataVertex("MAC : " + n.MAC);
                 //Add vertex to data graph
                 dataGraph.AddVertex(dataVertex);
             }
@@ -188,12 +212,32 @@ namespace PT_UI_Design
             //get the indexed list of graph vertices we have already added
             var vlist = dataGraph.Vertices.ToList();
             //Then create two edges optionaly defining Text property to show who are connected
-            var dataEdge = new DataEdge(vlist[0], vlist[1]) { Text = string.Format("{0} -> {1}", vlist[0], vlist[1]) };
-            dataGraph.AddEdge(dataEdge);
-            dataEdge = new DataEdge(vlist[2], vlist[3]) { Text = string.Format("{0} -> {1}", vlist[2], vlist[3]) };
-            dataGraph.AddEdge(dataEdge);
+            foreach(NetworkInterface n in interafaces)
+            {
+                foreach(string connection in n.connections)
+                {
+                    var dataEdge = new DataEdge(vlist[n.pos], vlist[FindNetworkInteface(FindMacByIP(connection))]) { Text = string.Format("{0} - {1}",n.MAC, FindMacByIP(connection)) };
+                    dataGraph.AddEdge(dataEdge);
+                }
+            }
+            //var dataEdge = new DataEdge(vlist[0], vlist[1]) { Text = string.Format("{0} -> {1}", vlist[0], vlist[1]) };
+            //dataGraph.AddEdge(dataEdge);
+            //dataEdge = new DataEdge(vlist[2], vlist[3]) { Text = string.Format("{0} -> {1}", vlist[2], vlist[3]) };
+            //dataGraph.AddEdge(dataEdge);
 
             return dataGraph;
+        }
+
+        public string FindMacByIP(string IP)
+        {
+            foreach(NetworkInterface i in interafaces)
+            {
+                foreach(string adress in i.connections)
+                {
+                    if (IP == adress) return i.MAC;
+                }
+            }
+            return "";
         }
 
         public void Dispose()
