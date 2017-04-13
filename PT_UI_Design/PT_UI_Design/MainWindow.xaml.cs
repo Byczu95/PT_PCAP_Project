@@ -24,6 +24,7 @@ namespace PT_UI_Design
     {
         private List<TabItem> _tabItems;
         private TabItem _tabAdd;
+        private int graphCounter;
 
         static int a = 3;
 
@@ -33,15 +34,20 @@ namespace PT_UI_Design
             _tabAdd.Header = "Strona startowa";
             StartPage sp = new StartPage();
             _tabAdd.Content = sp;
+            int newItemIndex = 0;
 
             if (_tabItems.Count == 0) _tabItems.Add(_tabAdd);
-            else _tabItems.Insert(_tabItems.Count - 1, _tabAdd);
+            else
+            {
+                _tabItems.Insert(tabControl.SelectedIndex + 1, _tabAdd);
+                newItemIndex = tabControl.SelectedIndex + 1;
+            } 
 
             tabControl.DataContext = null;
             tabControl.DataContext = _tabItems;
-
-            tabControl.SelectedIndex = 0;
+            
             tabControl.Items.Refresh();
+            tabControl.SelectedIndex = newItemIndex;
         }
 
         private string ExtractFileName(string fullName)
@@ -63,6 +69,7 @@ namespace PT_UI_Design
             _tabItems = new List<TabItem>();
             AddStartPage();
             Analize.IsEnabled = false;
+            graphCounter = 0;
         }
 
         private void File_Open_Click(object sender, RoutedEventArgs e)
@@ -70,6 +77,7 @@ namespace PT_UI_Design
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "PCAP Files (*.pcap)|*.pcap";
             openFileDialog.Title = "Please select an file to open.";
+            int newItemIndex = 0;
             if (openFileDialog.ShowDialog() == true)
             {
                 //TODO wczytywanie pliku lub plików
@@ -80,30 +88,48 @@ namespace PT_UI_Design
                     PcapFileControl pfc = new PcapFileControl(s);
                     _tabAdd.Content = pfc;
                     if (_tabItems.Count == 0) _tabItems.Add(_tabAdd);
-                    else _tabItems.Insert(_tabItems.Count - 1, _tabAdd);
+                    else _tabItems.Insert(tabControl.SelectedIndex + 1, _tabAdd);
+                    newItemIndex = tabControl.SelectedIndex + 1;
                 }
 
                 tabControl.DataContext = null;
                 tabControl.DataContext = _tabItems;
-
-                tabControl.SelectedIndex = 0;
+                
                 tabControl.Items.Refresh();
+                tabControl.SelectedIndex = newItemIndex;
             }
         }
 
         private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int selectionIndex = tabControl.SelectedIndex;
-            if (selectionIndex < 0) selectionIndex = 0;
-            TabItem ti = _tabItems[selectionIndex];
-            if (IsAPcapFile(ti.Header.ToString())) Analize.IsEnabled = true;
-            else Analize.IsEnabled = false;
+            if (tabControl.SelectedIndex >= 0)
+            {
+                int selectionIndex = tabControl.SelectedIndex;
+                if (selectionIndex < 0) selectionIndex = 0;
+                TabItem ti = _tabItems[selectionIndex];
+                if (IsAPcapFile(ti.Header.ToString())) Analize.IsEnabled = true;
+                else Analize.IsEnabled = false;
+            }
         }
 
         private void Analize_Graph_Click(object sender, RoutedEventArgs e)
         {
-            WindowGraph winG = new WindowGraph();
-            winG.Show();
+            var tabContent = tabControl.SelectedContent as UserControl;
+
+            GraphTabControl GTC = new GraphTabControl(((IGetPacket)tabControl.SelectedContent).getPacketsData());
+            _tabAdd = new TabItem();
+            _tabAdd.Header = "Graph[" + graphCounter + "]";
+            graphCounter++;
+            _tabAdd.Content = GTC;
+            if (_tabItems.Count == 0) _tabItems.Add(_tabAdd);
+            else _tabItems.Insert(tabControl.SelectedIndex + 1, _tabAdd);
+            int newItemIndex = tabControl.SelectedIndex + 1;
+
+            tabControl.DataContext = null;
+            tabControl.DataContext = _tabItems;
+            
+            tabControl.Items.Refresh();
+            tabControl.SelectedIndex = newItemIndex;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -118,24 +144,28 @@ namespace PT_UI_Design
 
         private void File_Close_Card_Click(object sender, RoutedEventArgs e)
         {
+            int nextItem = tabControl.SelectedIndex - 1;
+            if (nextItem < 0) nextItem = 0;
             _tabItems.Remove(_tabItems[tabControl.SelectedIndex]);
 
             tabControl.DataContext = null;
             tabControl.DataContext = _tabItems;
-
-            tabControl.SelectedIndex = 0;
+            
             tabControl.Items.Refresh();
+            tabControl.SelectedIndex = nextItem;
         }
 
         private void File_Close_Cards_Click(object sender, RoutedEventArgs e)
         {
+            int nextItem = tabControl.SelectedIndex - 1;
+            if (nextItem < 0) nextItem = 0;
             _tabItems.Clear();
 
             tabControl.DataContext = null;
             tabControl.DataContext = _tabItems;
 
-            tabControl.SelectedIndex = 0;
             tabControl.Items.Refresh();
+            tabControl.SelectedIndex = nextItem;
         }
 
         private void File_Exit_Click(object sender, RoutedEventArgs e)

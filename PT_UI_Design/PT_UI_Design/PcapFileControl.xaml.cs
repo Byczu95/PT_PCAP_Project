@@ -23,12 +23,13 @@ namespace PT_UI_Design
     /// <summary>
     /// Interaction logic for PcapFileControl.xaml
     /// </summary>
-    public partial class PcapFileControl : UserControl
+    public partial class PcapFileControl : UserControl, IGetPacket
     {
         private string _filePath;
         private static TextBox _textBox;
         private static ListView _listview;
         private static List<MyPacket> packets;
+        public static int a;
 
         public PcapFileControl(string filePath)
         {
@@ -99,7 +100,7 @@ namespace PT_UI_Design
             }
         }
 
-        public static List<MyPacket> getPacketsData()
+        public List<MyPacket> getPacketsData()
         {
             packets = new List<MyPacket>();
             foreach(MyPacket p in _listview.Items)
@@ -108,5 +109,10 @@ namespace PT_UI_Design
             }
             return packets;
         }
+    }
+
+    public interface IGetPacket
+    {
+        List<MyPacket> getPacketsData();
     }
 }

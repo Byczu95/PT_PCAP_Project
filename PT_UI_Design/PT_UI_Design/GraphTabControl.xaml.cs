@@ -1,6 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 using GraphX.PCL.Common.Enums;
 using GraphX.PCL.Logic.Algorithms.LayoutAlgorithms;
 using GraphX.Controls;
@@ -10,16 +21,18 @@ using QuickGraph;
 namespace PT_UI_Design
 {
     /// <summary>
-    /// Interaction logic for WindowGraph.xaml
+    /// Interaction logic for GraphTabControl.xaml
     /// </summary>
-    public partial class WindowGraph : Window
+    public partial class GraphTabControl : UserControl
     {
-        Random Rand;
-        GraphPcap graph;
+        private static List<MyPacket> packets;
+        private Random Rand;
+        private GraphPcap graph;
 
-        public WindowGraph()
+        public GraphTabControl(List<MyPacket> data)
         {
             InitializeComponent();
+            packets = data;
             graph = new GraphPcap();
             Rand = new Random();
             GraphAreaPcap_Setup();
@@ -135,4 +148,6 @@ namespace PT_UI_Design
             Area.Dispose();
         }
     }
+
+    
 }
