@@ -58,11 +58,6 @@ namespace PT_UI_Design
             }
         }
 
-        private NetworkInterface FindNetworkInteface(string mac)
-        {
-            
-        }
-
         private bool IsIntefaceUnique(string mac)
         {
             foreach(NetworkInterface n in interafaces)
