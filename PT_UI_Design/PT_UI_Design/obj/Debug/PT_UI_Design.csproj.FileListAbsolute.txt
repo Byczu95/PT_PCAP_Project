@@ -121,3 +121,6 @@ D:\Users\Szymon\Desktop\PT\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.Prop
 D:\Users\Szymon\Desktop\PT\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.csproj.GenerateResource.Cache
 D:\Users\Szymon\Desktop\PT\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.baml
 D:\Users\Szymon\Desktop\PT\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.baml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.csprojResolveAssemblyReference.cache

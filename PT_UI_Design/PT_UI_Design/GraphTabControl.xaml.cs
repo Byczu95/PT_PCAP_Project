@@ -26,6 +26,9 @@ namespace PT_UI_Design
     public partial class GraphTabControl : UserControl
     {
         private static List<MyPacket> packets;
+        private static List<NetworkConnection> connections;
+        private static List<NetworkInterface> interafaces;
+
         private Random Rand;
         private GraphPcap graph;
 
@@ -33,11 +36,63 @@ namespace PT_UI_Design
         {
             InitializeComponent();
             packets = data;
+            FindAllNetworkInterfaces();
+            FindAllNetworkConnections();
             graph = new GraphPcap();
             Rand = new Random();
             GraphAreaPcap_Setup();
             randomGraph();
             RelayoutGraph();
+        }
+
+        private void FindAllNetworkInterfaces()
+        {
+            interafaces = new List<NetworkInterface>();
+            foreach(MyPacket p in packets)
+            {
+                if (IsIntefaceUnique(p.SourceMac))
+                {
+                    interafaces.Add(new NetworkInterface(p.SourceMac));
+
+                }
+            }
+        }
+
+        private NetworkInterface FindNetworkInteface(string mac)
+        {
+            
+        }
+
+        private bool IsIntefaceUnique(string mac)
+        {
+            foreach(NetworkInterface n in interafaces)
+            {
+                if (n.MAC == mac)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void FindAllNetworkConnections()
+        {
+            connections = new List<NetworkConnection>();
+            foreach(MyPacket p in packets)
+            {
+                //NetworkConnection newConnection = new NetworkConnection(newInterfaceDest, newInterfaceSour);
+
+                //if (IsConnectionUnique(newConnection)) connections.Add(newConnection);
+            }
+        }
+
+        private bool IsConnectionUnique(NetworkConnection nc)
+        {
+            foreach(NetworkConnection c in connections)
+            {
+                if ((nc.interfaceA == c.interfaceA) || (nc.interfaceB == c.interfaceB)) return false;
+            }
+            return true;
         }
 
         private void RelayoutGraph()
