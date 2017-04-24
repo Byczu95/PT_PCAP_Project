@@ -28,8 +28,8 @@ namespace PT_UI_Design
         private string _filePath;
         private static TextBox _textBox;
         private static ListView _listview;
-        private static List<MyPacket> packets;
-        public static int a;
+        private static List<MyPacket> allPackets; //wszystkie wczytane pakiety
+        private static List<MyPacket> viewPackets; //pakiety na liscie prezentowanej uzytkownikowi
 
         public PcapFileControl(string filePath)
         {
@@ -37,7 +37,10 @@ namespace PT_UI_Design
             _textBox = textBox;
             _listview = listViewFileData;
             _filePath = filePath;
+            allPackets = new List<MyPacket>();
+            viewPackets = new List<MyPacket>();
 
+            filterComboBox.Items.Add("Pokaż wszystko");
             filterComboBox.Items.Add("Adres źródłowy MAC");
             filterComboBox.Items.Add("Adres docelowy MAC");
             filterComboBox.Items.Add("Adres źródłowy IP");
@@ -65,10 +68,11 @@ namespace PT_UI_Design
             device.Capture();
 
             device.Close();
-            
+
+            set_listview(allPackets);
         }
 
-        private static int packetIndex = 1;
+        private static int _packetIndex = 1;
 
         /// <summary>
         /// Prints the source and dest IP and MAC addresses of each received Ethernet frame
@@ -87,27 +91,87 @@ namespace PT_UI_Design
                     {
                         var ipPacket = IpPacket.GetEncapsulated(packet);
 
-                        _listview.Items.Add(new MyPacket { Id = packetIndex, 
-                                                         Time = e.Packet.Timeval.Date.ToString(),
-                                                         SourceIP = ipPacket.SourceAddress.MapToIPv4().ToString(), 
-                                                         DestIP = ipPacket.DestinationAddress.MapToIPv4().ToString(),
-                                                         SourceMac = ethernetPacket.SourceHwAddress.ToString(),
-                                                         DestMac = ethernetPacket.DestinationHwAddress.ToString()
-                                                            });
+                        allPackets.Add(new MyPacket
+                        {
+                            Id = _packetIndex,
+                            Time = e.Packet.Timeval.Date.ToString(),
+                            SourceIP = ipPacket.SourceAddress.MapToIPv4().ToString(),
+                            DestIP = ipPacket.DestinationAddress.MapToIPv4().ToString(),
+                            SourceMac = ethernetPacket.SourceHwAddress.ToString(),
+                            DestMac = ethernetPacket.DestinationHwAddress.ToString()
+                        });
                     }
                 }
-                packetIndex++;
+                _packetIndex++;
             }
         }
 
         public List<MyPacket> getPacketsData()
         {
-            packets = new List<MyPacket>();
-            foreach(MyPacket p in _listview.Items)
+            //usuwanie duplikatów itd.
+            return allPackets;
+        }
+
+        private bool packetIsGoodForFilter(MyPacket myP)
+        {
+            //tu tzeba czyscic filterTextBox.Text i bd dzialac
+            string cleanFilterText = filterTextBox.Text;
+
+                switch (filterComboBox.SelectedValue.ToString())
+                {
+                    case "Adres źródłowy MAC":
+                        if (myP.SourceMac == cleanFilterText)
+                            return true;
+                        else
+                            return false;
+
+                    case "Adres docelowy MAC":
+                        if (myP.DestMac == cleanFilterText)
+                            return true;
+                        else
+                            return false;
+
+                    case "Adres źródłowy IP":
+                        if (myP.SourceIP == cleanFilterText)
+                            return true;
+                        else
+                            return false;
+
+                    case "Adres docelowy IP":
+                        if (myP.SourceMac == cleanFilterText)
+                            return true;
+                        else
+                            return false;
+                    default:
+                        return false; //packet is not OK
+                }      
+        }
+
+        private void set_listview(List<MyPacket> myList)
+        {
+            _listview.Items.Clear();
+            foreach(MyPacket elem in myList)
+                _listview.Items.Add(elem);
+        }
+
+        private void filterTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            foreach (MyPacket elem in allPackets)
+                if (packetIsGoodForFilter(elem))
+                    viewPackets.Add(elem);
+
+            set_listview(viewPackets);
+        }
+
+        private void filterComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (filterComboBox.SelectedValue.ToString() == "Pokaż wszystko")
             {
-                packets.Add(p);
+                filterTextBox.IsEnabled = false;
+                set_listview(allPackets);
             }
-            return packets;
+            else
+                filterTextBox.IsEnabled = true;
         }
     }
 

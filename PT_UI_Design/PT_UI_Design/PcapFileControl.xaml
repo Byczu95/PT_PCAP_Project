@@ -19,8 +19,8 @@
                 <ColumnDefinition Width="500*" />
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Content="Filtr:" Height="30" Margin="5" />
-            <ComboBox Grid.Row="0" Grid.Column="1" x:Name="filterComboBox" Margin="5" SelectedIndex="0" MinWidth="180" Height="30" />
-            <TextBox Grid.Row="0" Grid.Column="2" x:Name="filterTextBox" Text="&#xD;&#xA;" MaxHeight="30" Height="30"  Margin="5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+            <ComboBox Grid.Row="0" Grid.Column="1" x:Name="filterComboBox" Margin="5" SelectedIndex="0" MinWidth="180" Height="30" SelectionChanged="filterComboBox_SelectionChanged" />
+            <TextBox Grid.Row="0" Grid.Column="2" x:Name="filterTextBox" MaxHeight="30" Height="30"  Margin="5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" LostFocus="filterTextBox_LostFocus" />
         </Grid>
         <TextBox Grid.Row="1" x:Name="textBox" IsReadOnly="True" Height="30" Margin="5"/>
         <ListView Grid.Row="2" x:Name="listViewFileData" Margin="5" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Stretch" Height="500" >

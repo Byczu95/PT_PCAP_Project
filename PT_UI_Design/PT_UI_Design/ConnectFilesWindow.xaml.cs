@@ -32,7 +32,7 @@ namespace PT_UI_Design
             {
                 if (IsAPcapFile(elem.Header.ToString()))
                 {
-                    ListBoxCFW.Items.Add(elem.Header.ToString());
+                    ListViewCFW.Items.Add(elem.Header.ToString());
                 }
             }
         }
@@ -45,7 +45,7 @@ namespace PT_UI_Design
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (!ListBoxCFW.Items.IsEmpty)
+            if (!ListViewCFW.Items.IsEmpty)
             {
                 MessageBox.Show("Wybrane pliki zostały połączone");
                 ConnectFiles();
