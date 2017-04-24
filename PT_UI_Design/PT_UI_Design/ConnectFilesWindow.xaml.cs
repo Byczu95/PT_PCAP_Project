@@ -1,4 +1,4 @@
-﻿using PT_UI_Design.Models;
+﻿using PT_MAPACKET.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace PT_UI_Design
+namespace PT_MAPACKET
 {
     /// <summary>
     /// Interaction logic for ConnectFilesWindow.xaml

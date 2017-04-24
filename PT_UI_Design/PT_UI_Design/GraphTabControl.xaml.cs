@@ -15,10 +15,10 @@ using System.Windows.Shapes;
 using GraphX.PCL.Common.Enums;
 using GraphX.PCL.Logic.Algorithms.LayoutAlgorithms;
 using GraphX.Controls;
-using PT_UI_Design.Models;
+using PT_MAPACKET.Models;
 using QuickGraph;
 
-namespace PT_UI_Design
+namespace PT_MAPACKET
 {
     /// <summary>
     /// Interaction logic for GraphTabControl.xaml

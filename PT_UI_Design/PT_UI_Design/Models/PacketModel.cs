@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PT_UI_Design.Models
+namespace PT_MAPACKET.Models
 {
     public class MyPacket
     {

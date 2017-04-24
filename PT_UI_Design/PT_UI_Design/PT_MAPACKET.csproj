@@ -7,7 +7,7 @@
     <ProjectGuid>{23ED03D7-6DAE-4EF7-99CC-2DDFF9424A73}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PT_UI_Design</RootNamespace>
+    <RootNamespace>PT_MAPACKET</RootNamespace>
     <AssemblyName>PT_UI_Design</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

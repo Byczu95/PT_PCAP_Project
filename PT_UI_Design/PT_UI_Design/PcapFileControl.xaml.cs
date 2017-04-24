@@ -15,10 +15,10 @@ using System.Windows.Shapes;
 using SharpPcap;
 using PacketDotNet;
 using SharpPcap.LibPcap;
-using PT_UI_Design.Models;
+using PT_MAPACKET.Models;
 using NUnit.Framework;
 
-namespace PT_UI_Design
+namespace PT_MAPACKET
 {
     /// <summary>
     /// Interaction logic for PcapFileControl.xaml
@@ -149,29 +149,38 @@ namespace PT_UI_Design
 
         private void set_listview(List<MyPacket> myList)
         {
-            _listview.Items.Clear();
             foreach(MyPacket elem in myList)
                 _listview.Items.Add(elem);
-        }
-
-        private void filterTextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            foreach (MyPacket elem in allPackets)
-                if (packetIsGoodForFilter(elem))
-                    viewPackets.Add(elem);
-
-            set_listview(viewPackets);
         }
 
         private void filterComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (filterComboBox.SelectedValue.ToString() == "Pokaż wszystko")
             {
+                _listview.Items.Clear();
                 filterTextBox.IsEnabled = false;
                 set_listview(allPackets);
             }
             else
                 filterTextBox.IsEnabled = true;
+        }
+
+        private void filterButton_Click(object sender, RoutedEventArgs e)
+        {
+            _listview.Items.Clear();
+            viewPackets.Clear();
+
+            if (filterComboBox.SelectedValue.ToString() == "Pokaż wszystko")
+            {
+                set_listview(allPackets);
+                return;
+            }
+
+            foreach (MyPacket elem in allPackets)
+                if (packetIsGoodForFilter(elem))
+                    viewPackets.Add(elem);
+
+            set_listview(viewPackets);
         }
     }
 

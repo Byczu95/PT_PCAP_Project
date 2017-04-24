@@ -1,6 +1,6 @@
 ﻿using GraphX.PCL.Common.Models;
 
-namespace PT_UI_Design.Models
+namespace PT_MAPACKET.Models
 {
     /* DataEdge is the data class for the edges. It contains all custom edge data specified by the user.
      * This class also must be derived from EdgeBase class that provides properties and methods mandatory for

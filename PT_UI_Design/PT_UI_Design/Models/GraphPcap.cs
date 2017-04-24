@@ -1,6 +1,6 @@
 using QuickGraph;
 
-namespace PT_UI_Design.Models
+namespace PT_MAPACKET.Models
 {
     /// <summary>
     /// This is our custom data graph derived from BidirectionalGraph class using custom data types.

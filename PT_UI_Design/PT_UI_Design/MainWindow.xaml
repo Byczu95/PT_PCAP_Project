@@ -1,9 +1,9 @@
-﻿<Window x:Class="PT_UI_Design.MainWindow"
+﻿<Window x:Class="PT_MAPACKET.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PT_UI_Design"
+        xmlns:local="clr-namespace:PT_MAPACKET"
         mc:Ignorable="d"
         Title="MAPacket" Height="800" Width="600" Closing="Window_Closing" MinWidth="800" MinHeight="600">
     <Grid x:Name="grid_Main">
