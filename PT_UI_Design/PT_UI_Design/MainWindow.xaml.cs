@@ -176,7 +176,7 @@ namespace PT_MAPACKET
         private void File_Connect_Click(object sender, RoutedEventArgs e)
         {
             _tabAdd = new TabItem();
-            _tabAdd.Header = "Merged file";
+            _tabAdd.Header = "Merged file.pcap";
             PcapFileControl mf = new PcapFileControl();
             _tabAdd.Content = mf;
             int newItemIndex = 0;
