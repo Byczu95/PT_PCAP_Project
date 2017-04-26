@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
 
-namespace PT_UI_Design
+namespace PT_MAPACKET
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
