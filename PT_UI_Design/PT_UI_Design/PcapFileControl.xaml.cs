@@ -191,35 +191,34 @@ namespace PT_MAPACKET
         private bool packetIsGoodForFilter(MyPacket myP)
         {
             //tu tzeba czyscic filterTextBox.Text i bd dzialac
-            string cleanFilterText = filterTextBox.Text;
 
             switch (filterComboBox.SelectedValue.ToString())
             {
                 case "Adres źródłowy MAC":
-                    if (myP.SourceMac == cleanFilterText)
+                    if (myP.SourceMac == filterTextBox.Text)
                         return true;
                     else
                         return false;
 
                 case "Adres docelowy MAC":
-                    if (myP.DestMac == cleanFilterText)
+                    if (myP.DestMac == filterTextBox.Text)
                         return true;
                     else
                         return false;
 
                 case "Adres źródłowy IP":
-                    if (myP.SourceIP == cleanFilterText)
+                    if (myP.SourceIP == filterTextBox.Text)
                         return true;
                     else
                         return false;
 
                 case "Adres docelowy IP":
-                    if (myP.SourceMac == cleanFilterText)
+                    if (myP.DestIP == filterTextBox.Text)
                         return true;
                     else
                         return false;
                 default:
-                    return false; //packet is not OK
+                    return false; 
             }
         }
 
@@ -249,17 +248,20 @@ namespace PT_MAPACKET
             _listview.Items.Clear();
             viewPackets.Clear();
 
-            if (filterComboBox.SelectedValue.ToString() == "Pokaż wszystko")
+            if (filterComboBox.SelectedValue.ToString() == "Pokaż wszystko" || filterTextBox.Text == "")
             {
                 setListview(packets);
                 return;
             }
 
             foreach (MyPacket elem in packets)
+            {
                 if (packetIsGoodForFilter(elem))
+                {
                     viewPackets.Add(elem);
-
-            setListview(viewPackets);
+                    _listview.Items.Add(elem);
+                }
+            }
         }
 
     }
