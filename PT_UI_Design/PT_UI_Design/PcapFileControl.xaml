@@ -25,7 +25,7 @@
             <Button Grid.Row="0" Grid.Column="3" x:Name="filterButton" Margin="0,5,5,5" Content="S" Click="filterButton_Click" ></Button>
         </Grid>
         <TextBox Grid.Row="1" x:Name="textBox" IsReadOnly="True" Height="30" Margin="5"/>
-        <ListView Grid.Row="2" x:Name="listViewFileData" Margin="5" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Stretch" >
+        <ListView Grid.Row="2" x:Name="listViewFileData" Margin="5" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch" Height="600">
             <ListView.View>
                 <GridView >
                     <GridViewColumn Header="Id" Width="45" DisplayMemberBinding="{Binding Id}"/>
