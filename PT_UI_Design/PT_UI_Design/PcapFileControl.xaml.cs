@@ -183,14 +183,8 @@ namespace PT_MAPACKET
             return packets;
         }
 
-        public List<MyPacket> getPackets()
-        {
-            return packets;
-        }
-
         private bool packetIsGoodForFilter(MyPacket myP)
         {
-            //tu tzeba czyscic filterTextBox.Text i bd dzialac
 
             switch (filterComboBox.SelectedValue.ToString())
             {
@@ -261,6 +255,20 @@ namespace PT_MAPACKET
                     viewPackets.Add(elem);
                     _listview.Items.Add(elem);
                 }
+            }
+        }
+
+        private void filterTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            switch (e.Key)
+            {
+                case Key.Enter:
+                    filterButton_Click(sender, e);
+                    break;
+                default:
+                    
+                    break;
             }
         }
 
