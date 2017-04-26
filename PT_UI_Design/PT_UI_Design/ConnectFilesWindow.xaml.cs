@@ -1,4 +1,4 @@
-﻿using PT_MAPACKET.Models;
+using PT_UI_Design.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace PT_MAPACKET
+namespace PT_UI_Design
 {
     /// <summary>
     /// Interaction logic for ConnectFilesWindow.xaml
@@ -23,16 +23,16 @@ namespace PT_MAPACKET
     {
         private List<TabItem> _tabItems;
 
-        public ConnectFilesWindow(List<TabItem> _tabItems)
+        public ConnectFilesWindow(List<TabItem> tabItems)
         {
             InitializeComponent();
-            this._tabItems = _tabItems;
+            this._tabItems = tabItems;
 
             foreach(TabItem elem in _tabItems)
             {
                 if (IsAPcapFile(elem.Header.ToString()))
                 {
-                    ListViewCFW.Items.Add(elem.Header.ToString());
+                    ListBoxCFW.Items.Add(elem.Header.ToString());
                 }
             }
         }
@@ -45,7 +45,7 @@ namespace PT_MAPACKET
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (!ListViewCFW.Items.IsEmpty)
+            if (!ListBoxCFW.Items.IsEmpty)
             {
                 MessageBox.Show("Wybrane pliki zostały połączone");
                 ConnectFiles();
@@ -54,14 +54,35 @@ namespace PT_MAPACKET
             {
                 MessageBox.Show("Dodaj pliki, które chcesz połączyć");
             }
-            //dodanie nowej karty do glownego pliku
             this.Close();
         }
 
         private bool ConnectFiles()
         {
-            //Łączenie plików
-            return true; //jezeli sie udalo
+
+            PcapFileControl pcapWindow = new PcapFileControl();
+            List<MyPacket> packets = new List<MyPacket>();
+
+            foreach (TabItem elem in _tabItems)
+            {
+                if (ListBoxCFW.Items.Contains(elem.Header))
+                {
+                    if (IsAPcapFile(elem.Header.ToString()))
+                    {
+                        pcapWindow = (PcapFileControl)elem.Content;
+                        foreach(MyPacket p in pcapWindow.listViewFileData.Items)
+                        {
+                            packets.Add(p);
+                        }
+                    }
+                }
+            }
+            
+            PcapFileControl pfc = new PcapFileControl(packets);
+            _tabItems[0].Content = pfc;
+                    
+
+            return true; 
         }
     }
 
