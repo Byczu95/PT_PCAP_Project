@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
 
-namespace PT_MAPACKET
+namespace PT_UI_Design
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -175,6 +175,21 @@ namespace PT_MAPACKET
 
         private void File_Connect_Click(object sender, RoutedEventArgs e)
         {
+            _tabAdd = new TabItem();
+            _tabAdd.Header = "Merged file";
+            PcapFileControl mf = new PcapFileControl();
+            _tabAdd.Content = mf;
+            int newItemIndex = 0;
+
+
+            _tabItems.Insert(0, _tabAdd);
+
+            tabControl.DataContext = null;
+            tabControl.DataContext = _tabItems;
+
+            tabControl.Items.Refresh();
+            tabControl.SelectedIndex = newItemIndex;
+
             ConnectFilesWindow cfw = new ConnectFilesWindow(_tabItems);
             cfw.Show();
         }
