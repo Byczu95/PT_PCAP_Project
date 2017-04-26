@@ -1,4 +1,3 @@
-using PT_UI_Design.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,8 +12,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PT_MAPACKET.Models;
 
-namespace PT_UI_Design
+namespace PT_MAPACKET
 {
     /// <summary>
     /// Interaction logic for ConnectFilesWindow.xaml
@@ -32,7 +32,7 @@ namespace PT_UI_Design
             {
                 if (IsAPcapFile(elem.Header.ToString()))
                 {
-                    ListBoxCFW.Items.Add(elem.Header.ToString());
+                    ListViewCFW.Items.Add(elem.Header.ToString());
                 }
             }
         }
@@ -45,7 +45,7 @@ namespace PT_UI_Design
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (!ListBoxCFW.Items.IsEmpty)
+            if (!ListViewCFW.Items.IsEmpty)
             {
                 MessageBox.Show("Wybrane pliki zostały połączone");
                 ConnectFiles();
@@ -59,13 +59,12 @@ namespace PT_UI_Design
 
         private bool ConnectFiles()
         {
-
             PcapFileControl pcapWindow = new PcapFileControl();
             List<MyPacket> packets = new List<MyPacket>();
 
             foreach (TabItem elem in _tabItems)
             {
-                if (ListBoxCFW.Items.Contains(elem.Header))
+                if (ListViewCFW.Items.Contains(elem.Header))
                 {
                     if (IsAPcapFile(elem.Header.ToString()))
                     {
@@ -80,7 +79,6 @@ namespace PT_UI_Design
             
             PcapFileControl pfc = new PcapFileControl(packets);
             _tabItems[0].Content = pfc;
-                    
 
             return true; 
         }
