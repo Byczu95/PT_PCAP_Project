@@ -230,7 +230,7 @@ namespace PT_MAPACKET
                     else
                         return false;
                 default:
-                    return false; 
+                    return false;
             }
         }
 
@@ -273,6 +273,19 @@ namespace PT_MAPACKET
                     viewPackets.Add(elem);
                     _listview.Items.Add(elem);
                 }
+            }
+        }
+
+        private void filterTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Enter:
+                    filterButton_Click(sender, e);
+                    break;
+                default:
+
+                    break;
             }
         }
     }
