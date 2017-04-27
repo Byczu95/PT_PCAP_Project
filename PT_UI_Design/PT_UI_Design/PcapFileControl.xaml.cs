@@ -30,7 +30,7 @@ namespace PT_MAPACKET
         private static ListView _listview;
         public static List<MyPacket> packets;
         public static List<MyPacket> viewPackets;
-        public static int a;
+        private static string checksum;
 
         public PcapFileControl()
         {
@@ -141,6 +141,7 @@ namespace PT_MAPACKET
         /// </summary>
         private static void device_OnPacketArrival(object sender, CaptureEventArgs e)
         {
+            checksum = "";
             if (e.Packet.LinkLayerType == PacketDotNet.LinkLayers.Ethernet)
             {
                 var packet = PacketDotNet.Packet.ParsePacket(e.Packet.LinkLayerType, e.Packet.Data);
@@ -148,7 +149,16 @@ namespace PT_MAPACKET
                 if ((PacketDotNet.EthernetPacket)packet != null)
                 {
                     var ethernetPacket = (PacketDotNet.EthernetPacket)packet;
-
+                    if (TcpPacket.GetEncapsulated(packet) != null)
+                    {
+                        var tcp = TcpPacket.GetEncapsulated(packet);
+                        checksum = tcp.Checksum.ToString();
+                    }
+                    else if (UdpPacket.GetEncapsulated(packet) != null)
+                    {
+                        var udp = UdpPacket.GetEncapsulated(packet);
+                        checksum = udp.Checksum.ToString();
+                    }
                     if (IpPacket.GetEncapsulated(packet) != null)
                     {
                         var ipPacket = IpPacket.GetEncapsulated(packet);
@@ -156,11 +166,12 @@ namespace PT_MAPACKET
                         _listview.Items.Add(new MyPacket
                         {
                             Id = packetIndex,
-                            Time = e.Packet.Timeval.Date.ToString(),
+                            Time = e.Packet.Timeval.Date.ToString() + "." + e.Packet.Timeval.MicroSeconds.ToString(),
                             SourceIP = ipPacket.SourceAddress.MapToIPv4().ToString(),
                             DestIP = ipPacket.DestinationAddress.MapToIPv4().ToString(),
                             SourceMac = ethernetPacket.SourceHwAddress.ToString(),
-                            DestMac = ethernetPacket.DestinationHwAddress.ToString()
+                            DestMac = ethernetPacket.DestinationHwAddress.ToString(),
+                            Checksum = checksum
                         });
                         packets.Add(new MyPacket
                         {
@@ -169,7 +180,8 @@ namespace PT_MAPACKET
                             SourceIP = ipPacket.SourceAddress.MapToIPv4().ToString(),
                             DestIP = ipPacket.DestinationAddress.MapToIPv4().ToString(),
                             SourceMac = ethernetPacket.SourceHwAddress.ToString(),
-                            DestMac = ethernetPacket.DestinationHwAddress.ToString()
+                            DestMac = ethernetPacket.DestinationHwAddress.ToString(),
+                            Checksum = checksum
                         });
                         packetIndex++;
                     }
@@ -183,8 +195,14 @@ namespace PT_MAPACKET
             return packets;
         }
 
+        public List<MyPacket> getPackets()
+        {
+            return packets;
+        }
+
         private bool packetIsGoodForFilter(MyPacket myP)
         {
+            //tu tzeba czyscic filterTextBox.Text i bd dzialac
 
             switch (filterComboBox.SelectedValue.ToString())
             {
@@ -257,21 +275,6 @@ namespace PT_MAPACKET
                 }
             }
         }
-
-        private void filterTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            switch (e.Key)
-            {
-                case Key.Enter:
-                    filterButton_Click(sender, e);
-                    break;
-                default:
-                    
-                    break;
-            }
-        }
-
     }
     public interface IGetPacket
     {
