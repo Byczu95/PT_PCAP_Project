@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +19,8 @@ namespace PT_MAPACKET.Models
         public string SourceIP { get; set; }
 
         public string DestIP { get; set; }
+
+        public string Checksum { get; set; }
 
     }
 }
