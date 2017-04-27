@@ -5,16 +5,16 @@ winexe
 C#
 .cs
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Release\
-PT_UI_Design
+PT_MAPACKET
 none
 false
 TRACE
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\App.xaml
-4-485884988
+5865982580
 3513397165
-191915552607
-23-1275617040
-MainWindow.xaml;PcapFileControl.xaml;StartPage.xaml;WindowGraph.xaml;
+21-1463964495
+25-1247164879
+ConnectFilesWindow.xaml;GraphTabControl.xaml;MainWindow.xaml;PcapFileControl.xaml;StartPage.xaml;
 
-False
+True
 
