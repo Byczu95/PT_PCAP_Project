@@ -8,7 +8,8 @@
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
         <Button Content="Połącz" Grid.Row="1" Click="Button_Click"/>
-        <ListView x:Name="ListViewCFW" Grid.Row="0" SelectionMode="Multiple">
+        <ListView x:Name="ListViewCFW" Grid.Row="0" SelectionMode="Multiple" Margin="0,0,0,31">
         </ListView>
+        <CheckBox x:Name="deleteDuplicate" Content="Usuń duplikaty przy łączeniu" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" Width="261" Height="21"/>
     </Grid>
 </Window>
