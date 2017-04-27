@@ -71,7 +71,15 @@ namespace PT_MAPACKET
                         pcapWindow = (PcapFileControl)elem.Content;
                         foreach(MyPacket p in pcapWindow.listViewFileData.Items)
                         {
-                            packets.Add(p);
+                            if (this.deleteDuplicate.IsChecked == true)
+                            {
+                                //TODO
+                                packets.Add(p);
+                            }
+                            else
+                            {
+                                packets.Add(p);
+                            }
                         }
                     }
                 }
