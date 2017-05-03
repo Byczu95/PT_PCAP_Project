@@ -22,5 +22,7 @@ namespace PT_MAPACKET.Models
 
         public string Checksum { get; set; }
 
+        public int Length { get; set; }
+
     }
 }
