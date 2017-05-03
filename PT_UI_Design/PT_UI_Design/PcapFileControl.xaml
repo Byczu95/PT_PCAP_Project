@@ -21,10 +21,10 @@
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Content="Filtr:" Height="30" Margin="5" />
             <ComboBox Grid.Row="0" Grid.Column="1" x:Name="filterComboBox" Margin="5" SelectedIndex="0" MinWidth="180" Height="30" SelectionChanged="filterComboBox_SelectionChanged" />
-            <TextBox Grid.Row="0" Grid.Column="2" x:Name="filterTextBox" MaxHeight="30" Height="30"  Margin="5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" KeyDown="filterTextBox_KeyDown" />
+            <TextBox Grid.Row="0" Grid.Column="2" x:Name="filterTextBox" MaxHeight="30" Height="30"  Margin="5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" KeyDown="filterTextBox_KeyDown"  />
             <Button Grid.Row="0" Grid.Column="3" x:Name="filterButton" Margin="0,5,5,5" Content="S" Click="filterButton_Click" ></Button>
         </Grid>
-        <TextBox Grid.Row="1" x:Name="textBox" IsReadOnly="True" Height="30" Margin="5"/>
+        <TextBox Grid.Row="1" x:Name="textBox" IsReadOnly="True" Height="30" Margin="5,5,10,5"/>
         <ListView Grid.Row="2" x:Name="listViewFileData" Margin="5" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch" Height="600">
             <ListView.View>
                 <GridView >
@@ -34,9 +34,10 @@
                     <GridViewColumn Header="Docel. adres IP" Width="155" DisplayMemberBinding="{Binding DestIP}"/>
                     <GridViewColumn Header="Zrodl. adres MAC" Width="155" DisplayMemberBinding="{Binding SourceMac}"/>
                     <GridViewColumn Header="Docel. adres MAC" Width="155" DisplayMemberBinding="{Binding DestMac}"/>
+                    <GridViewColumn Header="Suma kontrolna" Width="100"  DisplayMemberBinding="{Binding Checksum}"/>
+                    <GridViewColumn Header="Dlugosc" Width="100" DisplayMemberBinding="{Binding Length}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-
     </Grid>
 </UserControl>
