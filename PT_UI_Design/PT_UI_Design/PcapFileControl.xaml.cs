@@ -46,6 +46,7 @@ namespace PT_MAPACKET
             filterComboBox.Items.Add("Adres źródłowy IP");
             filterComboBox.Items.Add("Adres docelowy IP");
 
+
             ICaptureDevice device;
         }
         public PcapFileControl(string filePath)
@@ -171,7 +172,8 @@ namespace PT_MAPACKET
                             DestIP = ipPacket.DestinationAddress.MapToIPv4().ToString(),
                             SourceMac = ethernetPacket.SourceHwAddress.ToString(),
                             DestMac = ethernetPacket.DestinationHwAddress.ToString(),
-                            Checksum = checksum
+                            Checksum = checksum,
+                            Length = packet.Bytes.Length
                         });
                         packets.Add(new MyPacket
                         {
@@ -181,7 +183,8 @@ namespace PT_MAPACKET
                             DestIP = ipPacket.DestinationAddress.MapToIPv4().ToString(),
                             SourceMac = ethernetPacket.SourceHwAddress.ToString(),
                             DestMac = ethernetPacket.DestinationHwAddress.ToString(),
-                            Checksum = checksum
+                            Checksum = checksum,
+                            Length = packet.Bytes.Length
                         });
                         packetIndex++;
                     }
@@ -284,11 +287,11 @@ namespace PT_MAPACKET
                     filterButton_Click(sender, e);
                     break;
                 default:
-
                     break;
             }
         }
     }
+
     public interface IGetPacket
     {
         List<MyPacket> getPacketsData();
