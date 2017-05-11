@@ -10,13 +10,13 @@ namespace PT_MAPACKET.Models
     {
         public int pos { get; set; }
         public List<string> IPs;
-        public List<string> connections;
+        public List<Connection> connections;
         public string MAC { get; set; }
         
         public NetworkInterface(string mac, int index)
         {
             IPs = new List<string>();
-            connections = new List<string>();
+            connections = new List<Connection>();
             MAC = mac;
             pos = index;
         }

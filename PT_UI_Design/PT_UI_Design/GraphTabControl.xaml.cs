@@ -37,11 +37,24 @@ namespace PT_MAPACKET
             packets = data;
             FindAllNetworkInterfaces();
             FindAllNetworkConnections();
+            CalculateStats();
             graph = new GraphPcap();
             Rand = new Random();
             GraphAreaPcap_Setup();
             randomGraph();
             RelayoutGraph();
+        }
+
+        private void CalculateStats()
+        {
+            foreach(NetworkInterface i in interafaces)
+            {
+                foreach (Connection c in i.connections)
+                {
+                    double deltaTime = c.stats.lastPacketTime.Subtract(c.stats.firstPacketTime).TotalSeconds;
+                    c.stats.speed = Math.Round(((double)c.stats.Bits / 1000) / (deltaTime+1),2);
+                }
+            }
         }
 
         private void FindAllNetworkInterfaces()
@@ -106,7 +119,23 @@ namespace PT_MAPACKET
             foreach(MyPacket p in packets)
             {
                 int source = FindNetworkInteface(p.SourceMac);
-                if(!(interafaces[source].connections.Contains(p.DestIP))) interafaces[source].connections.Add(p.DestIP);
+                Connection temp = new Connection(p.DestIP);
+                //Unique connection
+                if (!(interafaces[source].connections.Exists(x=> x.adress == p.DestIP)))
+                {
+                    temp.stats.firstPacketTime = DateTime.ParseExact(p.Time, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                    temp.stats.lastPacketTime = temp.stats.firstPacketTime;
+                    temp.stats.Bits += p.Length;
+                    temp.stats.packetCount++;
+                    interafaces[source].connections.Add(temp);
+                }
+                //Non-uniqe connection
+                else
+                {
+                    interafaces[source].connections.Find(x => x.adress == p.DestIP).stats.lastPacketTime = DateTime.ParseExact(p.Time, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                    interafaces[source].connections.Find(x => x.adress == p.DestIP).stats.Bits += p.Length;
+                    interafaces[source].connections.Find(x => x.adress == p.DestIP).stats.packetCount++;
+                }
             }
         }
 
@@ -153,7 +182,7 @@ namespace PT_MAPACKET
 
             //This method sets edges labels visibility. It is also applied to all edges in Area.EdgesList. You can also set property for
             //each edge individually using property, for ex: Area.EdgesList[0].ShowLabel = true;
-            Area.ShowAllEdgesLabels(false);
+            Area.ShowAllEdgesLabels(true);
         }
 
         private void GraphAreaPcap_Setup()
@@ -214,9 +243,9 @@ namespace PT_MAPACKET
             //Then create two edges optionaly defining Text property to show who are connected
             foreach(NetworkInterface n in interafaces)
             {
-                foreach(string connection in n.connections)
+                foreach(Connection connection in n.connections)
                 {
-                    var dataEdge = new DataEdge(vlist[n.pos], vlist[FindNetworkInteface(FindMacByIP(connection))]) { Text = string.Format("{0} - {1}",n.MAC, FindMacByIP(connection)) };
+                    var dataEdge = new DataEdge(vlist[n.pos], vlist[FindNetworkInteface(FindMacByIP(connection.adress))]) { Text = string.Format("{0} Mb",connection.stats.speed) };
                     dataGraph.AddEdge(dataEdge);
                 }
             }

@@ -35,3 +35,4 @@ C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debu
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.g.resources
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.Properties.Resources.resources
 C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.csproj.GenerateResource.Cache
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.csprojResolveAssemblyReference.cache
