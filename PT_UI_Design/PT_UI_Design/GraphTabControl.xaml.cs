@@ -123,7 +123,7 @@ namespace PT_MAPACKET
                 //Unique connection
                 if (!(interafaces[source].connections.Exists(x=> x.adress == p.DestIP)))
                 {
-                    temp.stats.firstPacketTime = DateTime.ParseExact(p.Time, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                    temp.stats.firstPacketTime = DateTime.ParseExact(p.Time, "yyyy-MM-dd HH:mm:ss.fffffffff", System.Globalization.CultureInfo.InvariantCulture);
                     temp.stats.lastPacketTime = temp.stats.firstPacketTime;
                     temp.stats.Bits += p.Length;
                     temp.stats.packetCount++;
@@ -132,7 +132,7 @@ namespace PT_MAPACKET
                 //Non-uniqe connection
                 else
                 {
-                    interafaces[source].connections.Find(x => x.adress == p.DestIP).stats.lastPacketTime = DateTime.ParseExact(p.Time, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+                    interafaces[source].connections.Find(x => x.adress == p.DestIP).stats.lastPacketTime = DateTime.ParseExact(p.Time, "yyyy-MM-dd HH:mm:ss.fffffffff", System.Globalization.CultureInfo.InvariantCulture);
                     interafaces[source].connections.Find(x => x.adress == p.DestIP).stats.Bits += p.Length;
                     interafaces[source].connections.Find(x => x.adress == p.DestIP).stats.packetCount++;
                 }
