@@ -51,7 +51,7 @@ namespace PT_MAPACKET
             {
                 foreach (Connection c in i.connections)
                 {
-                    double deltaTime = c.stats.lastPacketTime.Subtract(c.stats.firstPacketTime).TotalSeconds;
+                    double deltaTime = c.stats.lastPacketTime.Subtract(c.stats.firstPacketTime).TotalMilliseconds/1000;
                     c.stats.speed = Math.Round(((double)c.stats.Bits / 1000) / (deltaTime+1),2);
                 }
             }
