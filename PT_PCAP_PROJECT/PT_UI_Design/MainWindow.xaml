@@ -36,7 +36,7 @@
                 </MenuItem>
                 <MenuItem x:Name="Help" Header="Pomoc">
                     <MenuItem x:Name="Autors" Header="Autorzy"  Click="Credits"/>
-                    <MenuItem x:Name="Document" Header="Dokumentacja"/>
+                    <MenuItem x:Name="Document" Header="Dokumentacja" Click="Documentation"/>
                 </MenuItem>
             </Menu>
 

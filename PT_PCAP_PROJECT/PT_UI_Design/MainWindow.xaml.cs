@@ -218,5 +218,10 @@ namespace PT_MAPACKET
             tabControl.Items.Refresh();
             tabControl.SelectedIndex = newItemIndex;
         }
+
+        private void Documentation(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1qbL6TRIKGybA3dy8_g0xD1fBV7d2FfHWkWnALTYbdtI/edit#");
+        }
     }
 }
