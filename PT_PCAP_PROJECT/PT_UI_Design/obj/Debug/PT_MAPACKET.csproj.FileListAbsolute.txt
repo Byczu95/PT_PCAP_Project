@@ -155,3 +155,6 @@ C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Desig
 C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.pdb
 C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\Credits.g.cs
 C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\Credits.baml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PT_MAPACKET.exe.config
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.exe
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.pdb
