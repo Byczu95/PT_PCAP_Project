@@ -1,0 +1,157 @@
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\PT_UI_Design.exe.config
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.exe
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.pdb
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\PT_UI_Design.exe
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\PT_UI_Design.pdb
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\GraphX.PCL.Common.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\GraphX.PCL.Logic.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\GraphX.WPF.Controls.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\nunit.framework.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\PacketDotNet.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Data.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Graphviz.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Serialization.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\SharpPcap.dll
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.xml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Data.xml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Graphviz.xml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Serialization.xml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.baml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\GraphTabControl.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\MainWindow.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PcapFileControl.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\StartPage.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\App.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design_Content.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design_MarkupCompile.cache
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design_MarkupCompile.lref
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\GraphTabControl.baml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\MainWindow.baml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PcapFileControl.baml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\StartPage.baml
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_UI_Design.g.resources
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.Properties.Resources.resources
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.csproj.GenerateResource.Cache
+C:\Users\Tetrach\Source\Repos\PT_PCAP_Project\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.csprojResolveAssemblyReference.cache
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\PT_MAPACKET.exe.config
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\PT_MAPACKET.exe
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\PT_MAPACKET.pdb
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\GraphX.PCL.Common.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\GraphX.PCL.Logic.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\GraphX.WPF.Controls.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\nunit.framework.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\PacketDotNet.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Data.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Graphviz.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Serialization.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\SharpPcap.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.xml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Data.xml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Graphviz.xml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\bin\Debug\QuickGraph.Serialization.xml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.csprojResolveAssemblyReference.cache
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\ConnectFilesWindow.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\GraphTabControl.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\MainWindow.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PcapFileControl.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\StartPage.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\App.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET_Content.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET_MarkupCompile.cache
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET_MarkupCompile.lref
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\GraphTabControl.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\MainWindow.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PcapFileControl.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\StartPage.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.g.resources
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.Properties.Resources.resources
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.csproj.GenerateResource.Cache
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.exe
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_UI_Design\PT_UI_Design\obj\Debug\PT_MAPACKET.pdb
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PT_MAPACKET.exe.config
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.exe
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.pdb
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PT_MAPACKET.exe
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PT_MAPACKET.pdb
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\GraphX.PCL.Common.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\GraphX.PCL.Logic.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\GraphX.WPF.Controls.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\nunit.framework.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PacketDotNet.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Data.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Graphviz.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Serialization.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\SharpPcap.dll
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.xml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Data.xml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Graphviz.xml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Serialization.xml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.csprojResolveAssemblyReference.cache
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\ConnectFilesWindow.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\ConnectFilesWindow.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\GraphTabControl.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\MainWindow.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PcapFileControl.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\StartPage.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\App.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET_Content.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET_MarkupCompile.cache
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET_MarkupCompile.lref
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\GraphTabControl.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\MainWindow.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PcapFileControl.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\StartPage.baml
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.g.resources
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.Properties.Resources.resources
+D:\Users\Szymon\Downloads\PT_PCAP_Project-master\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.csproj.GenerateResource.Cache
+D:\Users\Szymon\Downloads\PT_PCAP_Project\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PT_MAPACKET.exe.config
+D:\Users\Szymon\Downloads\PT_PCAP_Project\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.exe
+D:\Users\Szymon\Downloads\PT_PCAP_Project\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.pdb
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PT_MAPACKET.exe.config
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PT_MAPACKET.exe
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PT_MAPACKET.pdb
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\GraphX.PCL.Common.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\GraphX.PCL.Logic.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\GraphX.WPF.Controls.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\nunit.framework.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\PacketDotNet.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Data.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Graphviz.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Serialization.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\SharpPcap.dll
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.xml
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Data.xml
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Graphviz.xml
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\bin\Debug\QuickGraph.Serialization.xml
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.csprojResolveAssemblyReference.cache
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\ConnectFilesWindow.baml
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\ConnectFilesWindow.g.cs
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\GraphTabControl.g.cs
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\MainWindow.g.cs
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PcapFileControl.g.cs
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\StartPage.g.cs
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\App.g.cs
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET_Content.g.cs
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET_MarkupCompile.cache
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET_MarkupCompile.lref
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\GraphTabControl.baml
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\MainWindow.baml
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PcapFileControl.baml
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\StartPage.baml
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.g.resources
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.Properties.Resources.resources
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.csproj.GenerateResource.Cache
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.exe
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\PT_MAPACKET.pdb
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\Credits.g.cs
+C:\Users\7\workspace\Przechwytywanie pakietów\final\PT_PCAP_PROJECT\PT_UI_Design\obj\Debug\Credits.baml
