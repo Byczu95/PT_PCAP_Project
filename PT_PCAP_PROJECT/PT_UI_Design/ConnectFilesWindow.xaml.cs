@@ -30,7 +30,7 @@ namespace PT_MAPACKET
 
             foreach (TabItem elem in _tabItems)
             {
-                if (IsAPcapFile(elem.Header.ToString()))
+                if (IsAPcapFile(elem.Header.ToString()) && _tabItems.IndexOf(elem) != 0)
                 {
                     ListViewCFW.Items.Add(elem.Header.ToString());
                 }
