@@ -222,7 +222,7 @@ namespace PT_MAPACKET
 
         private void Documentation(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1qbL6TRIKGybA3dy8_g0xD1fBV7d2FfHWkWnALTYbdtI/edit#");
+            System.Diagnostics.Process.Start("https://github.com/SzymonK95/PT_PCAP_Project/blob/master/dokumentacja/MAPacket-Dokumentacja.pdf");
         }
 
         private void Save_file(object sender, RoutedEventArgs e)

@@ -31,8 +31,6 @@
                 </MenuItem>
                 <MenuItem x:Name="Analize" Header="Analizuj">
                     <MenuItem x:Name="Analize_Graph" Header="Mapuj topologię sieci" Click="Analize_Graph_Click"/>
-                    <Separator/>
-                    <MenuItem x:Name="Analize_Statistics" Header="Statystyki"/>
                 </MenuItem>
                 <MenuItem x:Name="Help" Header="Pomoc">
                     <MenuItem x:Name="Autors" Header="Autorzy"  Click="Credits"/>
