@@ -24,5 +24,10 @@ namespace PT_MAPACKET.Models
 
         public int Length { get; set; }
 
+        public override string ToString()
+        {
+            var values = new { Id, Time, SourceMac, SourceIP, DestMac, DestIP, Checksum, Length };
+            return String.Join(",", values);
+        }
     }
 }

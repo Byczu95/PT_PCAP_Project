@@ -15,8 +15,8 @@
             <Menu x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Top" IsMainMenu="True" Width="{Binding ElementName=grid_Main,Path=ActualWidth}" DockPanel.Dock="Top">
                 <MenuItem x:Name="File" Header="Plik">
                     <MenuItem x:Name="File_Open" Header="Otwórz" Click="File_Open_Click"/>
-                    <MenuItem x:Name="File_Save" Header="Zapisz"/>
-                    <MenuItem x:Name="File_SaveAs" Header="Zapisz jako"/>
+                    <MenuItem x:Name="File_Save" Header="Zapisz" Click="Save_file"/>
+                    <MenuItem x:Name="File_SaveAs" Header="Zapisz jako" Click="Save_file_as"/>
                     <Separator/>
                     <MenuItem x:Name="File_Close_Card" Header="Zamknij kartę" Click="File_Close_Card_Click"/>
                     <MenuItem x:Name="File_Close_Cards" Header="Zamknij wszystkie karty" Click="File_Close_Cards_Click"/>

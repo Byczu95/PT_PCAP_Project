@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using PT_MAPACKET.Models;
 
 namespace PT_MAPACKET
 {
@@ -41,11 +42,11 @@ namespace PT_MAPACKET
             {
                 _tabItems.Insert(tabControl.SelectedIndex + 1, _tabAdd);
                 newItemIndex = tabControl.SelectedIndex + 1;
-            } 
+            }
 
             tabControl.DataContext = null;
             tabControl.DataContext = _tabItems;
-            
+
             tabControl.Items.Refresh();
             tabControl.SelectedIndex = newItemIndex;
         }
@@ -53,7 +54,7 @@ namespace PT_MAPACKET
         private string ExtractFileName(string fullName)
         {
             string[] split = fullName.Split('\\');
-            return split[split.Length-1];
+            return split[split.Length - 1];
         }
 
         private bool IsAPcapFile(string text)
@@ -106,7 +107,7 @@ namespace PT_MAPACKET
                 MessageBox.Show("Wystąpił błąd podczas otwierania pliku");
             }
         }
-        
+
 
         private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -135,7 +136,7 @@ namespace PT_MAPACKET
 
             tabControl.DataContext = null;
             tabControl.DataContext = _tabItems;
-            
+
             tabControl.Items.Refresh();
             tabControl.SelectedIndex = newItemIndex;
         }
@@ -158,7 +159,7 @@ namespace PT_MAPACKET
 
             tabControl.DataContext = null;
             tabControl.DataContext = _tabItems;
-            
+
             tabControl.Items.Refresh();
             tabControl.SelectedIndex = nextItem;
         }
@@ -222,6 +223,61 @@ namespace PT_MAPACKET
         private void Documentation(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://docs.google.com/document/d/1qbL6TRIKGybA3dy8_g0xD1fBV7d2FfHWkWnALTYbdtI/edit#");
+        }
+
+        private void Save_file(object sender, RoutedEventArgs e)
+        {
+            TabItem currentPage = tabControl.SelectedItem as TabItem;
+
+            if (IsAPcapFile(currentPage.Header.ToString()))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(currentPage.Header + ".txt"))
+            {
+                PcapFileControl pcf = (PcapFileControl)currentPage.Content;
+                List<MyPacket> lines = pcf.getPacketsData();
+                foreach (MyPacket line in lines)
+                {
+                    file.WriteLine(line);
+                }
+            }
+            else
+                MessageBox.Show("Ten plik nie moze zostać zapisany", "Błąd zapisu");
+        }
+
+        private void Save_file_as(object sender, RoutedEventArgs e)
+        {
+            TabItem currentPage = tabControl.SelectedItem as TabItem;
+
+            if (IsAPcapFile(currentPage.Header.ToString()))
+            {
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "Txt file|*.txt";
+                saveFileDialog1.Title = "Save Txt File";
+                saveFileDialog1.ShowDialog();
+
+                PcapFileControl pcf = (PcapFileControl)currentPage.Content;
+                List<MyPacket> lines = pcf.getPacketsData();
+
+                if (saveFileDialog1.FileName != "")
+                {
+                    // Saves the Image via a FileStream created by the OpenFile method.
+                    System.IO.FileStream fs =
+                       (System.IO.FileStream)saveFileDialog1.OpenFile();
+                    foreach (MyPacket line in lines)
+                        WriteLine(fs, line.ToString() + Environment.NewLine);
+
+                    fs.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ten plik nie moze zostać zapisany", "Błąd zapisu");
+            }
+        }
+
+        private static void WriteLine(FileStream fs, string value)
+        {
+            byte[] info = new UTF8Encoding(true).GetBytes(value);
+            fs.Write(info, 0, info.Length);
         }
     }
 }
