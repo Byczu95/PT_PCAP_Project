@@ -238,6 +238,8 @@ namespace PT_MAPACKET
                 {
                     file.WriteLine(line);
                 }
+
+                MessageBox.Show("Plik został zapisany", "Zapis udany");
             }
             else
                 MessageBox.Show("Ten plik nie moze zostać zapisany", "Błąd zapisu");
@@ -266,6 +268,8 @@ namespace PT_MAPACKET
                         WriteLine(fs, line.ToString() + Environment.NewLine);
 
                     fs.Close();
+
+                    MessageBox.Show("Plik został zapisany", "Zapis udany");
                 }
             }
             else
