@@ -17,7 +17,7 @@ The best way to setup the project locally is to use VS to build project and use 
 ## Authors
 
 * **Szymon Kaszuba** - [SzymonK95](https://github.com/SzymonK95)
-* **Łukasz Knop** - [SzymonK95](https://github.com/Byczu95)
+* **Łukasz Knop** - [Byczu95](https://github.com/Byczu95)
 * **Adam Matuszak** - [Tetrach121](https://github.com/Tetrach121)
 
 See also the list of [contributors](https://github.com/SzymonK95/PT_PCAP_Project/contributors) who participated in this project.
